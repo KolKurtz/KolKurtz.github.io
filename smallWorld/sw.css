@@ -1,0 +1,27 @@
+/* main css small world 2*/
+
+body
+{
+	background: rgb(135,206,235);
+}
+
+.titleMain
+{
+	width: 150px;
+	height: 25px;
+	position: relative;
+	top: 5px;
+	left: 50px;
+	font-size: 8px;
+}
+
+#mainC
+{
+	border: solid 1px gray;
+}
+
+#gridMain
+{
+	margin-left: 50px;
+	margin-top: 25px;
+}

@@ -1,0 +1,9 @@
+2.02
+This time with easier tiling.
+
+Divide the main grid into eight.
+Predefine the layouts for those 8 subgrids
+Randomly load layouts into each quarter
+
+
+NEXT STEPS: loadlayout writemodel to set terrain type in datamodel
