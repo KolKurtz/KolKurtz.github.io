@@ -1,0 +1,13 @@
+@font-face {
+  font-family: Newb;
+  src: local("Newb"),
+       url(Newb.ttf);
+  font-weight: bold;
+}
+
+#body
+{
+ font-family: Newb;
+ background-color: "black";
+ color: "lime-green";
+}
