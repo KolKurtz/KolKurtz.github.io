@@ -1,7 +1,6 @@
 @font-face {
   font-family: Newb;
-  src: local("Newb"),
-       url(Newb.ttf);
+  src: url(Newb.ttf);
   font-weight: bold;
 }
 
