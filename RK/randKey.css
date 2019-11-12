@@ -1,0 +1,32 @@
+body
+{
+	background: rgb(44,45,108);
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	color: white;
+}
+
+#main
+{
+	position: absolute;
+	width: 800px;
+	height: 600px;
+	top: 10%;
+	font-size: 2.5rem;
+	color: white;
+	text-align: center;
+}
+
+#wide
+{
+	position: absolute;
+	font-size: 25rem;
+	top: 50px;
+	left: 20px;
+	width: 800px;
+	min-height: 400px;
+	background: rgb(100,100,150);
+	border: solid 1px black;
+	border-radius: 15px;
+	color: white;
+	text-align: center;
+}
