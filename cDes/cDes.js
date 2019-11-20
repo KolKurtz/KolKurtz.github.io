@@ -83,4 +83,10 @@ $(document).on("click","#clear",function(){
 });
 
 
+//clear all
+$(document).on("click","#clearall",function(){
+  location.reload();
+});
+
+
 window.onresize = function(){ location.reload(); }
