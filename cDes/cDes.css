@@ -1,11 +1,7 @@
-/* - cDes -*/
-@font-face{font-family:"Iconyu";src:url("kolkurtz.ttf") format('truetype'),url('Iconyu.eot?#iefix') format('embedded-opentype')}
-
-
 body
 {
-  font-family:"Iconyu",Geneva,sans-serif;
-  font-size:2rem;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size:1.5rem;
   background: #32292f;
   overflow: hidden;
 }
@@ -39,9 +35,9 @@ body
   box-sizing: border-box;
   height: 100px;
   float: left;
-  line-height: 120px;
+  line-height: 100px;
   border-right: solid 3px black;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   color: #777777;
   background: #afac81 url(string.png) repeat center;
@@ -57,6 +53,19 @@ body
   top: 700px;
   left: 50%;
   margin-left: -100px;
+  padding: 10px;
+  background: #705d56;
+}
+
+#permcont
+{
+  box-sizing: border-box;
+  position: absolute;
+  width: 400px;
+  height: 40px;
+  bottom: 0px;
+  right: 0px;
+  margin-right: 20px;
   padding: 10px;
   background: #705d56;
 }
