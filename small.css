@@ -1,0 +1,42 @@
+html
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+
+body
+{
+  background: rgb(0,0,0);
+}
+
+#centred
+{
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  height: 250px;
+  top: 30%;
+  background: rgb(183,183,183);
+  padding: 10px;
+  line-height: 20px;
+}
+#centred img
+{
+  display: inline-block;
+  margin: 0 0 20px 90px;
+}
+
+#foot
+{
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+}
+
+a:active, a:hover, a:visited, a:link
+{
+  color: white;
+  text-decoration: overline;
+}
