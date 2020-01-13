@@ -5,7 +5,7 @@ const slowF = 2;
 const iter = 10;
 const startMS = 10;
 const flashItemsK = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
-const flashItemsR = ["E","A","D","G","B","e"];
+const flashItemsR = ["E","A","D"];
 const flashItemsP = ["C","A","G","E","D"];
 const option = ["K","S","P"];
 
