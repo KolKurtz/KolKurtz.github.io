@@ -8,4 +8,5 @@ body
 body a:link, a:visited, a:hover, a:active
 {
     color: #99e1d9;
+    text-decoration: none;
 }
