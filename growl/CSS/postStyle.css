@@ -1,0 +1,565 @@
+/*BEGIN RESETS*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*END RESETS*/
+
+/*FONT*/
+
+@font-face
+{
+      font-family: "Iconyu";
+      src: url("../Media/font/kolkurtz.ttf") format('truetype'),
+			url('../Media/font/Iconyu.eot?#iefix') format('embedded-opentype'); /* IE6-IE8 */
+}
+
+/*END FONT*/
+
+html, body
+{
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+body
+{
+	/*font-family: "body", sans-serif;*/
+	font-size: 1.4rem;
+	background: #705d56 url('../Image/tile.png');
+	overflow-x: hidden;
+}
+
+#backer
+{
+	position: absolute;
+	width: 1200px;
+	height: auto;
+	left: 50%;
+	margin-left: -600px;
+	overflow: hidden;
+	background: #f0f7f4;
+}
+
+
+#header
+{
+		box-sizing: border-box;
+		clear: both;
+		background: #32292f;
+		height: 60px;
+		color: white;
+		font-family: "Iconyu", sans-serif;
+		overflow: hidden;
+}
+
+#header a
+{
+	float: left;
+}
+
+.backBtn, #uk, #fr {cursor: pointer;}
+
+h1, h2, .backBtn
+{
+	float: left;
+	margin: 0 20px 0 0;
+	font-family: "Iconyu", sans-serif;
+}
+
+h1
+{
+	font-weight: normal;
+	font-size: 6rem;
+	font-family: "Iconyu", sans-serif;
+	float: left;
+	margin-top: 15px;
+	letter-spacing: 2px;
+}
+h2
+{
+	font-size: 4rem;
+	float: left;
+	margin-top: 25px;
+}
+h3
+{
+	font-family: "Iconyu", sans-serif;
+	font-size: 3rem;
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
+
+
+#footer
+{
+	clear: both;
+	box-sizing: border-box;
+	font-family: "Iconyu", sans-serif;
+	font-size:2.5rem;
+	position: absolute;
+	bottom: 0px;
+	height: 40px;
+	width: 100%;
+	color: white;
+	background: #32292f;
+}
+
+.left
+{
+	margin: 10px 10px 0 10px;
+	float:left;
+}
+.right
+{
+	margin: 10px 10px 0 0;
+	float:right;
+}
+
+
+#footer a
+{
+    text-decoration: none;
+}
+
+#footer a:link, #footer a:visited, #footer a:hover, #footer a:active { color:#FFFFFF; }
+
+
+#postBody
+{
+	box-sizing: border-box;
+	float: left;
+	min-height: 400px;
+	line-height: 120%;
+	width: 80%;
+	font-size: 1.6rem;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	padding: 40px;
+}
+
+#postTitle, #related
+{
+	margin-bottom: 15px;
+	font-size: 3rem;
+	font-family: "Iconyu", sans-serif;
+}
+
+#postContent
+{
+	margin-bottom: 60px;
+}
+
+#postContent p
+{
+	margin-bottom: 15px;
+	line-height: 22px;
+}
+
+#postContent a:link, #postContent a:visited, #postContent a:hover, #postContent a:active { color: rgb(163, 53, 66); text-decoration: none;}
+
+
+.indentList li
+{
+	margin-left: 20px;
+}
+
+
+
+
+
+#macroGallery
+{
+	position: relative;
+	width: 95%;
+	height: 500px;
+	margin: 30px 0 60px 0;
+}
+
+.oneOffImage
+{
+	width: 95%;
+	margin: 30px 0 60px 0;
+}
+.oneOffImage img
+{
+	height: 100%;
+	width: 100%;
+}
+
+.clippedImage
+{
+	width: 95%;
+	margin: 30px 0 60px 0;
+	overflow: hidden;
+}
+.clippedImage img
+{
+	height: 100%;
+}
+
+#rightSide
+{
+	position: absolute;
+	box-sizing: border-box;
+	right: 0px;
+	width: 20%;
+	height: 100%;
+	background: #9caea9;
+	padding: 15px;
+}
+
+#sharing
+{
+	margin: 75px 0 90px 0;
+
+}
+
+#sharing ul
+{
+	text-align: center;
+}
+
+#sharing li
+{
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+#relatedPosts
+{
+	height: 200px;
+}
+#rightSub
+{
+	margin-bottom: 15px;
+	font-size: 1.4em;
+	font-family: "Iconyu", sans-serif;
+}
+#fillRelated
+{
+	margin-bottom: 12px;
+	font-size: 1.2em;
+	font-family: "Iconyu", sans-serif;
+}
+
+
+
+/*SOCBAR*/
+#socBar
+{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	z-index: 10;
+	width: 100px;
+	height: 30px;
+	background: url("../Image/SocPost.png");
+}
+
+#socBar li
+{
+	display: inline;
+	float: left;
+	height: 30px;
+	width: 40px;
+	cursor: pointer;
+	margin: 0 10px 0 0;
+}
+
+/*IMAGE ZOOM*/
+.bigImageWindow, .bigImageWindowC
+{
+	box-sizing: border-box;
+	position: fixed;
+	width: 100%;
+	height:100vh;
+	background: black;
+	z-index: 10;
+	padding: 2.5%;
+}
+.closeAdv
+{
+	color: #99e1d9;
+	font-size: 1rem;
+}
+.bigImageWindow img, .bigImageWindowC img
+{
+	width: 95%;
+	max-height: 800px;
+	max-width: 1000px;
+}
+
+
+/* Tablet (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 481px)
+and (max-width : 1200px)
+{
+	#backer
+	{
+		left: 0px;
+		margin-left: 0px;
+		width: 100%;
+		height: auto;
+		border: solid 1px black;
+		background:  #f0f7f4;
+	}
+	#header
+	{
+
+	}
+
+	.right
+	{
+
+	}
+
+	h2
+	{
+
+	}
+	h1
+	{
+
+	}
+	.backBtn
+	{
+
+	}
+	#footer
+	{
+
+	}
+	#socBar
+	{
+		background: url("../Image/SocPostSm.png");
+		height: 24px;
+		width: 156px;
+		right: 105px;
+	}
+
+	#socBar li
+	{
+		display: inline;
+		float: left;
+		height: 24px;
+		width: 32px;
+		cursor: pointer;
+		margin: 0 7px 0 0;
+	}
+
+
+	#sharing li
+	{
+
+	}
+	#sharing ul
+	{
+
+	}
+
+	#postBody
+	{
+
+	}
+
+	#postTitle
+	{
+
+	}
+
+	#postContent
+	{
+
+	}
+
+	#postSupplement
+	{
+
+	}
+
+	#footer
+	{
+	}
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (max-width : 480px)
+{
+
+
+	#backer
+	{
+		left: 0px;
+		margin-left: 0px;
+		width: 100%;
+		height: auto;
+		border: solid 1px black;
+		background:  #f0f7f4;
+	}
+	#header
+	{
+
+	}
+
+	.right
+	{
+
+	}
+
+	h3
+	{
+		font-size: 3em;
+		line-height: 25px;
+	}
+
+	h2
+	{
+		display: none;
+	}
+	h1
+	{
+
+	}
+	.backBtn
+	{
+
+	}
+	#footer
+	{
+		font-size: 0.8em;
+	}
+	#socBar
+	{
+		right: 0px;
+		top: 60px;
+		width: 150px;
+		height: 24px;
+		background: url("../Image/SocPostSm.png");
+	}
+
+	#sharing
+	{
+		margin: 0 0 30px 0;
+	}
+
+	#sharing li
+	{
+		width: 100%;
+	}
+	#sharing ul
+	{
+		margin-left: 0px;
+	}
+
+	#postBody
+	{
+		float: none;
+		position: static;
+		padding: 20px;
+		width: 100%;
+		margin: 20px 0 0 0;
+	}
+
+	#postTitle
+	{
+		font-size: 2.5em;
+		line-height: 25px;
+	}
+
+	#postContent
+	{
+		padding: 0 5px 0 5px;
+		font-size: 0.8em;
+		margin-bottom: 30px;
+	}
+
+	#postSupplement
+	{
+		font-size: 0.8em;
+	}
+
+	#footer
+	{
+		padding: 10px 5px 0 5px;
+		font-size: 1.5em;
+	}
+
+	.right
+	{
+		padding: 0px;
+	}
+
+	#rightSide
+	{
+		position: static;
+		box-sizing: border-box;
+		left: 0px;
+		width: 100%;
+		height: auto;
+		background: #9caea9;
+		padding: 27px 15px 30px 15px;
+	}
+
+	#macroGallery
+	{
+		margin: 30px 0 30px 0;
+	}
+
+	.oneOffImage
+	{
+		margin-bottom: 60px;
+	}
+
+	.oneOffImage img
+	{
+		width: 100%;
+		height: 100%;
+	}
+
+}

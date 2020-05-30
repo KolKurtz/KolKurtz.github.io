@@ -1,0 +1,159 @@
+/*FONT*/
+
+@font-face
+{
+      font-family: "Iconyu";
+      src: url("../Media/font/Iconyu.ttf") format('truetype'),
+			url('../Media/font/Iconyu.eot?#iefix') format('embedded-opentype'); /* IE6-IE8 */
+}
+
+/*END FONT*/
+
+label
+{
+	display: block;
+	float: left;
+	width: 170px;
+	line-height: 1.7em;
+}
+
+#container
+{
+	font-size: 1em;
+	width: 100%;
+	height: 800px;
+	margin-top: 20px;
+	margin-left: 5%;
+	background: rgb(220,220,220);
+}
+
+#control
+{
+	font-family: "Iconyu", sans-serif;
+	width: 100%;
+	background: rgba(200,200,200,0.4);	
+	box-sizing: border-box;
+	margin-top: 50px;
+	padding: 20px 0 0 20px;
+}
+
+.modelBox
+{
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	background: rgba(200,200,200,0.4);
+	padding: 10px;
+}
+
+
+#twoD
+{
+	top: 25px;
+	height: 200px;
+}
+#threeD
+{
+	top: 50px;
+	height: 400px;
+	margin-bottom: 100px;
+}
+
+#twoDOuts
+{
+	box-sizing: border-box;
+	position: absolute;
+	right: 10px;
+	width: 50%;
+	height: 150px;
+	background: rgba(200,200,200,0.6);
+	padding: 2px;
+}
+
+#twoDOuts li
+{
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	height: 37px;
+}
+
+#threeDOuts
+{
+	box-sizing: border-box;
+	position: absolute;
+	right: 10px;
+	width: 50%;
+	height: 360px;
+	background: rgba(200,200,200,0.6);
+	padding: 2px;
+}
+
+#threeDOuts li
+{
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	height: 22px;
+}
+
+figure
+{
+	box-sizing: border-box;
+	position: absolute;
+	display: block;
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size: 1em;
+	border: solid 3px white;
+}
+
+/*  2D   */
+
+#face
+{
+	position: absolute;
+	top: 50px;
+	left: 20px;
+	width: 100px;
+	height: 100px;
+}
+
+#cube
+{
+  position: absolute;
+}
+
+/*  3D   */
+
+.top {
+  -webkit-transform: rotate(-30deg) skewX(30deg) skewY(0deg) scaleY(0.87);
+  -ms-transform: rotate(-30deg) skewX(30deg) skewY(0deg) scaleY(0.87);
+  -moz-transform: rotate(-30deg) skewX(30deg) skewY(0deg) scaleY(0.87);
+  -o-transform: rotate(-30deg) skewX(30deg) skewY(0deg) scaleY(0.87);
+  transform: rotate(-30deg) skewX(30deg) skewY(0deg) scaleY(0.87);
+  
+  left: 50px;
+  top: 70px;
+}
+ 
+.lefty {
+  -webkit-transform: rotate(30deg) skewX(30deg) skewY(0deg);
+  -ms-transform: rotate(30deg) skewX(30deg) skewY(0deg);
+  -moz-transform: rotate(30deg) skewX(30deg) skewY(0deg);
+  -o-transform: rotate(30deg) skewX(30deg) skewY(0deg);
+  transform: rotate(30deg) skewX(30deg) skewY(0deg);
+
+  left: 7px;
+  top: 153px;  
+  
+}
+ 
+.front {
+  -webkit-transform: rotate(-30deg) skewX(-30deg) skewY(0deg);
+  -ms-transform: rotate(-30deg) skewX(-30deg) skewY(0deg);
+  -moz-transform: rotate(-30deg) skewX(-30deg) skewY(0deg);
+  -o-transform: rotate(-30deg) skewX(-30deg) skewY(0deg);
+  transform: rotate(-30deg) skewX(-30deg) skewY(0deg);
+  
+  left: 94px;
+  top: 153px;
+}
