@@ -3,7 +3,7 @@ body
  font-family: 'Quattrocento Sans', sans-serif;
  background-color: #32292f;
  color: #0caea9;
- overflow: hidden;
+ overflow-x: hidden;
 }
 
 body a:link, a:visited, a:hover, a:active
