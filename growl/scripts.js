@@ -26,7 +26,7 @@ function showArts(catIn)
   for(i=0;i<listy.length;i++)
   {
     var cutString = listy[i].split("_")[1].split(".")[0];
-    mainy.innerHTML += "<li><a href='https://kolkurtz.github.io/growl/posts/" + listy[i] + "'>" + cutString + "</a></li>";
+    mainy.innerHTML += "<li><a href='https://kolkurtz.github.io/growl/post/" + listy[i] + "'>" + cutString + "</a></li>";
   }
 
   mainy.innerHTML += "</ul>";
