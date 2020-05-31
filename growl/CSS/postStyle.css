@@ -58,6 +58,11 @@ table {
 
 /*END FONT*/
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
 html, body
 {
 	box-sizing: border-box;

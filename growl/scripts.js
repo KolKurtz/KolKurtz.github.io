@@ -5,7 +5,7 @@ const somebody = document.getElementById('cats');
 const mainy = document.getElementById('main')
 
 const categs = {
-                "THEORY" : ["ART1","ART2"],
+                "THEORY" : ["TH1_CHORDEXT1.html","ART2"],
                 "GEAR": ["ART1","ART2","ART3"],
                 "OPINION": ["OP1_WELCOME.html","OP2_20THANNIVERSARY.html","ART3","ART4"],
                 "PRACTICE": ["ART1","ART2","ART3","ART4","ART5"],
@@ -26,7 +26,7 @@ function showArts(catIn)
   for(i=0;i<listy.length;i++)
   {
     var cutString = listy[i].split("_")[1].split(".")[0];
-    mainy.innerHTML += "<li><a href='https://kolkurtz.github.io/growl/post/" + listy[i] + "'>" + cutString + "</a></li>";
+    mainy.innerHTML += "<li><a href='post/" + listy[i] + "'>" + cutString + "</a></li>";
   }
 
   mainy.innerHTML += "</ul>";
