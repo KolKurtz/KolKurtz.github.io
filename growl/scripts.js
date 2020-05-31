@@ -8,7 +8,7 @@ const categs = {
                 "THEORY" : ["TH1_CHORDEXT1.html","ART2"],
                 "GEAR": ["ART1","ART2","ART3"],
                 "OPINION": ["OP1_WELCOME.html","OP2_20THANNIVERSARY.html","ART3","ART4"],
-                "PRACTICE": ["ART1","ART2","ART3","ART4","ART5"],
+                "PRACTICE": ["PR1_MOSTUSEFULEXERCISE.html","ART2","ART3","ART4","ART5"],
                 "COMPOSITION": ["ART1","ART2","ART3","ART4","ART5","ART6"]
               }
 
