@@ -172,11 +172,29 @@ body
   padding: 25px;
   margin-bottom: 50px;
   width: 90%;
+  max-width: 1600px;
   height: 1000px;
   margin-top: 50px;
   margin-left: 5%;
   background: #9caea9;
+  overflow: hidden;
 }
+
+.sliding-background
+{
+  background: url("../Image/meguitar.jpg") repeat-x;
+  height: 950px;
+  width: 9000px;
+  animation: slide 60s linear infinite;
+}
+
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-1692px, 0, 0);
+  }
 
 #main li
 {
