@@ -1,3 +1,10 @@
+body::-webkit-scrollbar
+{
+  display: none;
+}
+
+
+
 body
 {
  font-family: 'Quattrocento Sans', sans-serif;
