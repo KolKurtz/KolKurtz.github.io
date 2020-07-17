@@ -26,6 +26,15 @@
 
 <body>
 
+<section>
+  <div id="tit" class="subBox">
+    CHORD DESIGNER PRO v1.1
+    <div id="inst">
+      Click on a fret position to add a played note and then choose interval type to highlight. Hit clear to remove the highlight. Hit clear all to wipe the fretboard.
+    </div>
+  </div>
+</section>
+
 <section id="fBoard" class="container">
 
   <div id="backF">
@@ -49,19 +58,34 @@
 <section id="output">
 </section>
 
-<div id="control">
+<div id="control" class="subBox">
   <ul>
-    <li id="root">Add root/octave</li>
-    <li id="fifth">Add fifth</li>
-    <li id="third">Add third</li>
-    <li id="seventh">Add seventh</li>
-    <li id="clear">Clear</li>
+    <li id="root"><a>Add root/octave</a></li>
+    <li id="fifth"><a>Add fifth</a></li>
+    <li id="third"><a>Add third</a></li>
+    <li id="seventh"><a>Add seventh</a></li>
+    <li id="tension"><a>Add tension</a></li>
+    <li id="clear"><a>Clear</a></li>
+  </ul>
+</div>
+
+<div id="analysis" class="subBox">
+  Analysis:
+  <ul>
   </ul>
 </div>
 
 <div id="permcont">
-  <a id="clearall">clear all</a>
+  <a id="flats">flats</a> -
+  <a id="sharps">sharps</a> -
+  <a id="clearall">  clear all</a>
 </div>
+
+<div id="cright">
+  All content copyright George Flecknell 2020
+</div>
+
+
 
 <script src="jquery.js" type="text/javascript"></script>
 <script src="cDes.js" type="text/javascript"></script>

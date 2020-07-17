@@ -6,6 +6,29 @@ body
   overflow: hidden;
 }
 
+#tit
+{
+
+}
+
+#cright
+{
+  position: absolute;
+  font-size: 0.8rem;
+  width: 300px;
+  height: 15px;
+  bottom: 0px;
+  left: 0px;
+  margin-left: 2px;
+  colour: black;
+}
+
+
+#inst
+{
+  margin: 10px;
+}
+
 #fBoard
 {
   box-sizing: border-box;
@@ -43,9 +66,37 @@ body
   background: #afac81 url(string.png) repeat center;
 }
 
-#control
+.stave
+{
+  position: absolute;
+  box-sizing: border-box;
+  margin: 25px 0px 0px 25px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  background: #705d56;
+}
+
+.noteHead
+{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.subBox
 {
   box-sizing: border-box;
+  border-radius: 12px;
+  padding: 10px;
+  background: #705d56;
+  color: #f0f7f4;
+}
+
+
+#control
+{
   display: none;
   position: absolute;
   width: 200px;
@@ -53,8 +104,19 @@ body
   top: 350px;
   left: 50%;
   margin-left: -100px;
-  padding: 10px;
-  background: #705d56;
+}
+
+#control ul li
+{
+  margin: 5px 0 5px 0;
+}
+
+#analysis
+{
+  display: none;
+  position: absolute;
+  width: 600px;
+  margin: 250px 0px 0px 20px;
 }
 
 #permcont
@@ -64,6 +126,7 @@ body
   width: 400px;
   height: 40px;
   bottom: 0px;
+  border-radius: 10px;
   right: 0px;
   margin-right: 20px;
   padding: 10px;
