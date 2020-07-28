@@ -1,0 +1,21 @@
+ul
+{
+  list-style: none;
+}
+
+li
+{
+}
+
+img
+{
+  width : 300px;
+  height: auto;
+  margin: 10px;
+}
+
+#cont
+{
+  display: flex;
+  flex-wrap: wrap;
+}
