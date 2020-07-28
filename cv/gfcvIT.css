@@ -1,0 +1,103 @@
+html
+{
+ font-family: 'Quattrocento Sans', sans-serif;
+ font-size: 80.5%;
+ background: black;
+}
+
+header
+{
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+hr
+{
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-style: inset;
+    border-width: 1px;
+    background-color: rgb(150,50,150);
+    border-color: rgb(150,50,150);
+    color: rgb(150,50,150);
+}
+
+#contact
+{
+  color: rgb(150,50,150);
+}
+
+
+.flowItem
+{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  line-height: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.flowItem h2
+{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.listy
+{
+   width:600px;
+ }
+.listy ol
+{
+  color: rgb(150,50,150);
+  list-style: initial;
+}
+.listy ol li
+{
+  padding:10px;
+  color: black;
+  border-left: 2px solid rgb(150,50,150);
+}
+.listy ol li em
+{
+  font-weight:bold;
+  display:block;
+}
+
+.listy ul
+{
+  color: black;
+  list-style: none;
+}
+
+.listy ul li
+{
+  padding: 0 0 0 15px;
+  color: black;
+  border-left: 0px;
+}
+
+.listy ul li em
+{
+  font-weight: 600;
+  display: inline;
+}
+
+#main
+{
+  box-sizing: border-box;
+  width: 775px;
+  background: white;
+  padding: 10px;
+}
+
+#main a, #main a:hover
+{
+    color: rgb(150,50,150);
+}
