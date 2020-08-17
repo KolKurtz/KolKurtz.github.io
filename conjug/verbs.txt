@@ -1,0 +1,2 @@
+PR,1,avoir,ai,as,a,avons,avez,ont
+PR,1,etre,suis,es,est,sommes,etez,sont

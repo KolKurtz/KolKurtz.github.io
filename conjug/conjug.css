@@ -1,0 +1,393 @@
+@font-face
+{
+    font-family: DeliciousRoman;
+    src: url("Jaapokki.otf");
+}
+
+html
+{
+  font-family: DeliciousRoman, Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  overflow: hidden;
+}
+
+#verbInput
+{
+  position: absolute;
+  height: 95%;
+  width: 100%;
+}
+
+/*FLEX*/
+.container
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.flexVert
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*END FLEX*/
+
+#verbTitle
+{
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  font-size: 5rem;
+  background: white;
+  padding-top: 15px;
+}
+
+#flagPanel
+{
+  position: absolute;
+  top: 0px;
+  width: 100px;
+  height: 100%;
+  right: 0px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#flagPanel div
+{
+  width: 50px;
+  height: 100%;
+  float: left;
+  padding-top: 32px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.greyTitle
+{
+  width: 100%;
+  margin-top: 180px;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 10rem;
+  color: #E1E4E4;
+}
+
+#bigPsn
+{
+  position: absolute;
+  width: 100px;
+  left: 0px;
+  margin-top: 120px;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 24rem;
+  color: #2C3232;
+}
+
+.inpMain
+{
+  height: 100%;
+  width: 33%;
+}
+
+.userInp
+{
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+#person
+{
+  background: #8BA6B1;
+}
+#aux
+{
+  background: #96AEB9;
+}
+#verb
+{
+  background: #A1B7C0;
+}
+
+input
+{
+    border: 5px solid white;
+    -webkit-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    -moz-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
+
+#info
+{
+  box-sizing: border-box;
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  bottom: 0px;
+  background: #7594A1;
+  font-size: 5rem;
+}
+
+
+.botPanel
+{
+  height: 100%;
+  font-size: 3rem;
+}
+
+
+#left, #right
+{
+  width: 100px;
+  background: #678997;
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+
+#right img
+{
+  width: 80%;
+  height: 80%;
+}
+
+#middle
+{
+  height: 100%;
+  font-size: 3.5rem;
+  padding: 5px;
+}
+
+#report
+{
+  position: fixed;
+  left: 25%;
+  width: 50%;
+  height: 140px;
+  bottom: 0px;
+  font-size: 4rem;
+  background: white;
+  display: none;
+  padding: 20px;
+}
+
+.again
+{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+}
+.again:hover
+{
+  color: #678997;
+}
+
+/*TOOLTIP*/
+.tTip
+{
+  position: absolute;
+  width: 200px;
+  height: auto;
+  background: white;
+  color: black;
+  font-size: 2rem;
+  padding: 5px;
+}
+
+#confBox
+{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 400px;
+  right: 25px;
+}
+
+/*accent board*/
+#popAcc
+{
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0px;
+  width: 50%;
+  height: 540px;
+  background: white;
+  font-size: 2rem;
+  padding: 20px;
+  display: none;
+}
+#popAcc table
+{
+  width: 100%;
+}
+#popAcc table td
+{
+  padding: 5px;
+}
+#popAcc table td:nth-child(1),#popAcc table td:nth-child(3)
+{
+  cursor: pointer;
+}
+#popAcc table td:nth-child(2),#popAcc table td:nth-child(4)
+{
+  background: #DDDDDD;
+}
+#accCl
+{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  colour: #DDDDDD;
+  cursor: pointer;
+}
+#accCl:hover
+{
+  color: #678997;
+}
+.red
+{
+  color: red;
+}
+
+
+@media only screen and (max-width: 1280px) and (min-width: 680px)
+{
+  #verbTitle
+  {
+    font-size: 3rem;
+    padding-top: 25px;
+    height: 60px;
+  }
+  .userInp
+  {
+    margin-left: 5px;
+  }
+  input
+  {
+    width: 100px;
+  }
+  .greyTitle
+  {
+    margin-left: 5px;
+    font-size: 4rem;
+  }
+  #bigPsn
+  {
+    font-size: 6rem;
+  }
+  #flagPanel
+  {
+    width: 40px;
+    right: 0px;
+  }
+  #flagPanel div
+  {
+    width: 20px;
+    float: left;
+    padding-top: 23px;
+  }
+  #confBox
+  {
+    top: 340px;
+  }
+  #middle
+  {
+    font-size: 2rem;
+  }
+  #report
+  {
+    font-size: 3rem;
+  }
+}
+
+
+@media only screen and (max-width: 680px)
+{
+  /* switch to mini app */
+  input
+  {
+      border: 5px solid white;
+      width: 100px;
+      -webkit-box-shadow:
+        inset 0 0 8px  rgba(0,0,0,0.1),
+              0 0 16px rgba(0,0,0,0.1);
+      -moz-box-shadow:
+        inset 0 0 8px  rgba(0,0,0,0.1),
+              0 0 16px rgba(0,0,0,0.1);
+      box-shadow:
+        inset 0 0 8px  rgba(0,0,0,0.1),
+              0 0 16px rgba(0,0,0,0.1);
+      padding: 15px;
+      background: rgba(255,255,255,0.5);
+      margin: 0 0 10px 0;
+  }
+  #verbTitle
+  {
+    font-size: 2rem;
+    padding-top: 25px;
+    height: 60px;
+  }
+  .userInp
+  {
+    margin-left: 5px;
+  }
+  .greyTitle
+  {
+    margin-left: 5px;
+    font-size: 2rem;
+  }
+  #bigPsn
+  {
+    font-size: 5rem;
+  }
+  #flagPanel
+  {
+    width: 40px;
+    right: 0px;
+  }
+  #flagPanel div
+  {
+    width: 20px;
+    float: left;
+    padding-top: 10px;
+  }
+  #middle
+  {
+    font-size: 2rem;
+  }
+  #report
+  {
+    font-size: 2rem;
+  }
+}
+
+
+/* KK core */
+#kk
+{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 10;
+}
