@@ -17,7 +17,7 @@ html
 {
   box-sizing:border-box;
   font-size:62.5%;
-  font-family: Arial, sans-serif;
+  font-family: 'Quattrocento Sans', sans-serif;
 }
 
 body
@@ -46,6 +46,8 @@ body
 
 #floatDeets
 {
+box-sizing: border-box;
+    padding-left: 20px;
   top: 0px;
   width: 100%;
   height: 30px;
@@ -86,9 +88,12 @@ body
 
 #about
 {
+  box-sizing: border-box;
+    padding: 10px;
   margin-left: 20px;
-  width: 60%;
+  width: 70%;
   line-height: 26px;
+  background-color: rgba(255,255,255,0.7);
 }
 
 #cats
@@ -159,10 +164,12 @@ body
 
 #leftF
 {
-  float: left;
+    margin-left: 10px;
+    float: left;
 }
 #rightF
 {
+    margin-right: 10px;
   float: right;
 }
 
@@ -206,8 +213,14 @@ body
 @media only screen and (max-width :1050px)
 {
 
+.tagLine
+{
+    font-size: 1.5rem;
+}
+    
 #cats
 {
+margin-top: 0px;
   height: 100px;
   font-size: 2rem;
   line-height: 20px;
@@ -222,5 +235,45 @@ body
     
 }
 
+/**MOBILE**/
 
-/**SMALL DEVICE under 800px CUT OUT BY CODE CHECK**/
+@media only screen and (max-width :600px)
+{
+
+.tagLine
+{
+    font-size: 1rem;
+}    
+
+#about
+{
+    font-size: 1rem;
+    line-height: 20px;
+}
+    
+#cats
+{
+  height: 100px;
+  font-size: 2rem;
+  line-height: 20px;
+  color: white;
+}
+
+#cats li
+{
+  margin: 0px 20px 20px 20px;
+  text-shadow: 2px 2px #000000;
+}
+    
+#main
+{
+    height: 600px;
+}
+#main li
+{
+    font-size: 1.5rem;
+    line-height: 25px;
+}
+    
+    
+}
