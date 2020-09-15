@@ -2,7 +2,8 @@
 //kolkurtz 30-05-20
 
 const somebody = document.getElementById('cats');
-const mainy = document.getElementById('main')
+const mainy = document.getElementById('main');
+const latestEl = document.getElementById('latestTitle');
 
 const categs = {
                 "THEORY" : ["TH1_CHORD^EXTENSION.html","TH2_UNCAGED.html","TH3_INVERSION101.html","TH4_INVERSIONS.html","TH5_NEAPOLITAN^CHORDS.html","TH6_KEYS^MODES^BISCUITS.html","TH7_NUMERIC^NOTATION.html","TH8_CHORD^ANATOMY^1.html","TH9_CHORD^ANATOMY^2.html",
@@ -13,6 +14,8 @@ const categs = {
                 "COMPOSITION": ["CO1_SIMPLIFY^PROGRESSIONS.html"],
                 "TAB": ["TB1_BACH^GAVOTTE^GR3.pdf"]
               }
+
+const latest = "<a href='post/TB1_BACH^GAVOTTE^GR3.pdf'>Bach's Gavotte in D major transcribed for guitar tab.</a>";
 
 
 function showArts(catIn)
@@ -42,7 +45,10 @@ function charep(stringy)
   return inString;
 }
 
-
+function getLatest()
+{
+  latestEl.innerHTML += latest;
+}
 
 
 window.onload = function(){
@@ -52,5 +58,7 @@ window.onload = function(){
       selCat = event.target.id;
       showArts(selCat);
   });
+
+  getLatest();
 
 }

@@ -89,7 +89,7 @@ box-sizing: border-box;
 #about
 {
   box-sizing: border-box;
-    padding: 10px;
+  padding: 10px;
   margin-left: 20px;
   width: 70%;
   line-height: 26px;
@@ -186,10 +186,22 @@ box-sizing: border-box;
   overflow: hidden;
 }
 
+#latest
+{
+  height: 50px;
+  margin-bottom: 25px;
+  color: black;
+}
+
+#latestTitle
+{
+  color: #000000;
+}
+
 .sliding-background
 {
   background: url("../Image/meguitar.jpg") repeat-x;
-  height: 950px;
+  height: 900px;
   width: 9000px;
   animation: slide 60s linear infinite;
 }
