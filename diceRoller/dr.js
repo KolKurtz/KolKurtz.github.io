@@ -153,7 +153,7 @@ function shoot()
     //identify attacker
     var atkr = units["orkBoyShoota"];
     var atkrCount = nAtk.value;
-    var atkrShots = 9 * atkr[10];
+    var atkrShots = atkrCount * atkr[10];
 
     //identify defender
     var dfndr = units["smIntercessorBR"];
@@ -309,7 +309,7 @@ function fight()
     //identify attacker
     var atkr = units["orkBoyShoota"];
     var atkrCount = nAtk.value;
-    var atkrShots = 9 * atkr[10];
+    var atkrShots = atkrCount * atkr[10];
 
     //identify defender
     var dfndr = units["smIntercessorBR"];
@@ -473,12 +473,26 @@ function main()
 {
     document.getElementById("shoot").addEventListener("click", function() 
     {
-        shoot();
+        if(nAtk.value==0)
+        {
+            alert("Please add an attacker")
+        }
+        else
+        {
+            shoot();
+        }
     });
 
     document.getElementById("fight").addEventListener("click", function() 
     {
-        fight();
+        if(nAtk.value==0)
+        {
+            alert("Please add an attacker")
+        }
+        else
+        {
+            fight();
+        }
     });
 
 }
