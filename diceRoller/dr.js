@@ -1,11 +1,11 @@
 //Dice roller app
 //kolkurtz 24_03_21
 
-//WS,BS,S,T,W,A,Sav,WeaponS,AP
+//WS,BS,S,T,W,A,Sav,WeaponS,AP,DMG,NoATKS
 const units = 
 {
-    orkBoyShoota: [5,3,4,4,1,2,6,4,0],
-    smIntercessorBR: [3,3,4,4,2,2,3,4,-1]
+    orkBoyShoota: [5,3,4,4,1,2,6,4,0,1,2], //10
+    smIntercessorBR: [3,3,4,4,2,2,3,4,-1,1,1]
 }
 
 
@@ -14,6 +14,7 @@ const units =
     const outH = document.getElementById("hit");
     const outW = document.getElementById("wound");
     const outS = document.getElementById("save");
+    const outD = document.getElementById("damage");
     const outO = document.getElementById("outcome");
     const outTxt = document.getElementById("resultText");
 
@@ -29,7 +30,6 @@ function d6Roll()
 function wRoll(inStr,inTough)
 {
     var differ=inTough/inStr;
-    console.log(differ);
 
     var result = Math.floor(Math.random()*6)+1;
 
@@ -82,8 +82,6 @@ function wRoll(inStr,inTough)
         console.log("You should not have come to this place");
     }
 
-    console.log("Returning wounded result of:" + wounded);
-
     return [result,wounded];
 }
 
@@ -91,7 +89,6 @@ function wRoll(inStr,inTough)
 function saveRoll(savDef,apAtk)
 {
     var modSave = savDef-apAtk;
-    console.log("saving on a: " + modSave);
 
     var result = Math.floor(Math.random()*6)+1;
     //variable for success or not
@@ -107,6 +104,26 @@ function saveRoll(savDef,apAtk)
     return[result,saved];
 }
 
+//damage rolling
+function rollDmg(wpDmg)
+{
+    var finalD = 0;
+    if(wpDmg == "d3")
+    {
+        finalD = Math.floor(Math.random()*3) + 1;
+    }
+    else if(wpDmg == "d6")
+    {
+        finalD = Math.floor(Math.random()*6) + 1;
+    }
+    else
+    {
+        console.log("You should not have come to this place");
+    }
+
+    return finalD;
+}
+
 
 
 
@@ -116,7 +133,8 @@ function roll()
 {
     //identify attacker
     var atkr = units["orkBoyShoota"];
-    var atkrCount = 10;
+    var atkrCount = 9;
+    var atkrShots = 9 * atkr[10];
 
     //identify defender
     var dfndr = units["smIntercessorBR"];
@@ -125,7 +143,7 @@ function roll()
     var combat = {};
 
     //for each attacker
-    for(let i=0;i<atkrCount;i++)
+    for(let i=0;i<atkrShots;i++)
     {
         //new data row
         var combatItemLabel = "cbt"+ i;
@@ -138,7 +156,7 @@ function roll()
                 combat[combatItemLabel][0]=rollyH;
         newAtk.innerHTML = "" + rollyH;
         outH.append(newAtk);
-        if(rollyH > atkr[0])
+        if(rollyH >= atkr[0])
         {
             newAtk.style.backgroundColor='red';
             combat[combatItemLabel][1]=1;
@@ -152,7 +170,6 @@ function roll()
         //wounds
         var newAtk = document.createElement("div");
         var rollyW = wRoll(atkr[7],dfndr[3]);
-        console.log("die roll of: " + rollyW[0] + "is a result of:" + rollyW[1]);
         newAtk.innerHTML = "" + rollyW[0];
                //store
                combat[combatItemLabel][2]=rollyW[0];
@@ -177,37 +194,76 @@ function roll()
             newAtk.style.backgroundColor='red';
         }
 
+        //damage
+        var newAtk = document.createElement("div");
+        var dmgUnit = "" + atkr[9];
+
+        if(dmgUnit.indexOf("d")<0)
+        {
+            newAtk.innerHTML = atkr[9];
+            combat[combatItemLabel][6]=atkr[9];
+            outD.append(newAtk);
+        }
+        else
+        {
+            //do multi damage roll
+            finalDmg = rollDmg(atkr[9]);
+            newAtk.innerHTML = finalDmg;
+            combat[combatItemLabel][6]=finalDmg;
+            outD.append(newAtk);
+        }
+
         //outcomes
         var newAtk = document.createElement("div");
         if(combat[combatItemLabel][1]==1 && combat[combatItemLabel][3]==1 && combat[combatItemLabel][5]==0)
         {
-            combat[combatItemLabel][6]="wound";
-            newAtk.innerHTML = "WND";
+            if(combat[combatItemLabel][6]>=dfndr[4])
+            {
+                combat[combatItemLabel][7]="kill";
+                newAtk.innerHTML = "KILL";
+            }
+            else
+            {
+                combat[combatItemLabel][7]="wound";
+                newAtk.innerHTML = "WND";
+            }
             newAtk.style.backgroundColor='red';
         }
         else
         {
-            combat[combatItemLabel][6]="";
+            combat[combatItemLabel][7]="";
         }
         outO.append(newAtk);
     }
 
-    console.log(combat);
+    
     //Calculate final outcome
+    console.log(combat);
     //count wounds
+    var countDead = 0;
     var countWounds = 0;
     for(thing in combat)
     {
-        if(combat[thing][6]=="wound")
+        if(combat[thing][7]=="kill")
         {
-            console.log("FOund a wound");
+            console.log("Found a kill");
+            countDead++;
+        }
+        if(combat[thing][7]=="wound")
+        {
+            console.log("Found a wound");
             countWounds++;
         }
     }
-    var countDead = countWounds / dfndr[4];
+
+    //dead from wounds
+    var extraDeads = Math.floor(countWounds / dfndr[4]);
+    var remainWounds = countWounds % dfndr[4];
+
+    countDead = countDead + extraDeads;
 
 
-    outTxt.innerHTML+="" + atkrCount + " orkBoyShoota" + "s have killed " + countDead + " smIntercessorBR" + "s";
+    outTxt.innerHTML+="" + atkrCount + " orkBoyShoota" + "s have killed " + countDead + " smIntercessorBR" + "s and wounded " + remainWounds + " more";
 
 
 }

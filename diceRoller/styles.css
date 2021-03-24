@@ -78,13 +78,13 @@ body
     font-size: 0.75rem;
 }
 
-#hit, #wound, #save, #outcome
+#hit, #wound, #save, #damage, #outcome
 {
     display: flex;
     flex-wrap: nowrap;
 }
 
-#hit div, #wound div, #save div, #outcome div
+#hit div, #wound div, #save div, #damage div, #outcome div
 {
     width: 60px;
     color: black;
@@ -107,6 +107,11 @@ body
 #save div
 {
     background-color: skyblue;
+}
+
+#damage div
+{
+    background-color: palegreen;
 }
 
 #outcome div
