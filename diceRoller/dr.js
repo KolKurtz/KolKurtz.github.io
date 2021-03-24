@@ -128,7 +128,7 @@ function rollDmg(wpDmg)
 
 
 
-//main
+//shooting rolls
 function roll()
 {
     //identify attacker
@@ -266,4 +266,13 @@ function roll()
     outTxt.innerHTML+="" + atkrCount + " orkBoyShoota" + "s have killed " + countDead + " smIntercessorBR" + "s and wounded " + remainWounds + " more";
 
 
+}
+
+
+
+
+//main
+function main()
+{
+    roll();
 }
