@@ -125,31 +125,40 @@ body
 #hit div
 {
     background-color: #187288;
+    min-width: 25px;
 }
 
 #wound div
 {
     background-color: #187288;
+    min-width: 25px;
 }
 
 #save div
 {
     background-color: #D87E22;
+    min-width: 25px;
 }
 
 #damage div
 {
     background-color: #187288;
+    min-width: 25px;
 }
 
 #outcome div
 {
     background-color: #11D385;
+    min-width: 25px;
 }
 
 #resultText
 {
     margin-top: 20px;
+    color: #11D385;
+    background-color: #123526;
+    padding: 20px;
+    display: none;
 }
 
 
@@ -217,3 +226,12 @@ form
       -webkit-appearance: none;
       margin: 0;
   }
+
+
+@media only screen and (max-width: 800px)
+{
+    #resCont
+    {
+        display: none;
+    }
+}

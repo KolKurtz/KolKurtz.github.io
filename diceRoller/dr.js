@@ -1,6 +1,6 @@
 //Dice roller app
 //kolkurtz 24_03_21
-//version 0.7
+//version 0.8
 
 
 //TODO
@@ -309,6 +309,10 @@ function shoot()
 
     outTxt.innerHTML+="" + atkrCount + " orkBoyShoota" + "s have killed " + countDead + " smIntercessorBR" + "s and wounded " + remainWounds + " more";
 
+
+    //show result elements
+    outTxt.style.display=('block');
+
 }
 
 
@@ -467,6 +471,9 @@ function fight()
 
     outTxt.innerHTML+="" + atkrCount + " orkBoyShoota" + "s have killed " + countDead + " smIntercessorBR" + "s and wounded " + remainWounds + " more";
 
+
+    //show result elements
+    outTxt.style.display=('block');
 }
 
 
