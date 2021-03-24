@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>40K Dice Roller</title>
+  <meta name="author" content="kolkurtz">
+  <meta name="description" content="Dice roll tester for 40K units">
+  <meta name="keywords" content="40k, dice">
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="reset.css" type="text/css">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  </head>
+  <body>
+  
+    <section class="lump">
+        <div id="mainTitle">WH40K Dice Roller</div>
+        <div id="mainTag">Select a unit to attack with. Choose shooting or melee. Choose opponent. Roll!</div>
+    </section>
+
+    <section class="lump">
+        <div id="atkTitle" class="subH">Attackers</div>
+        <div id="atkCont">
+            <div id="orkA" class="unit">Ork</div>
+        </div>
+    </section>
+
+    <section class="lump">
+        <div id="defkTitle" class="subH">Defenders</div>
+        <div id="defCont">
+            <div id="primD" class="unit">Intercessor</div>
+        </div>
+    </section>
+
+    <section class="lump">
+        <div id="actTitle" class="subH">Action</div>
+        <div id="actCont">
+            <div id="Shoot" class="actBtn">Shoot</div>
+            <div id="Fight" class="actBtn">Fight</div>
+        </div>
+    </section>
+
+    <section class="lump">
+        <div id="resTitle" class="subH">Results</div>
+        <div id="resCont">
+            
+            <div id="hit">
+                <div>hit</div>
+            </div>
+            
+            <div id="wound">
+                <div>wound</div>
+            </div>
+            
+            <div id="save">
+                <div>save</div>
+            </div>
+            
+            <div id="outcome">
+                <div>outcome</div>
+            </div>
+
+        </div>
+        <div id="resultText"></div>
+    </section>
+  
+  <script type="text/javascript" src="dr.js"></script>
+  <script type="text/javascript">
+   function autorun()
+   {
+     roll();
+   }
+   if (window.addEventListener) window.addEventListener("load", autorun, false);
+   else if (window.attachEvent) window.attachEvent("onload", autorun);
+   else window.onload = autorun;
+  </script>
+  </body>
+</html>
