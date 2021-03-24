@@ -18,6 +18,7 @@ const units =
 
 //global handles
     //get the output rows
+    const nAtk = document.getElementById("numberAtk");
     const outH = document.getElementById("hit");
     const outW = document.getElementById("wound");
     const outS = document.getElementById("save");
@@ -151,7 +152,7 @@ function shoot()
 
     //identify attacker
     var atkr = units["orkBoyShoota"];
-    var atkrCount = 9;
+    var atkrCount = nAtk.value;
     var atkrShots = 9 * atkr[10];
 
     //identify defender
@@ -307,7 +308,7 @@ function fight()
 
     //identify attacker
     var atkr = units["orkBoyShoota"];
-    var atkrCount = 9;
+    var atkrCount = nAtk.value;
     var atkrShots = 9 * atkr[10];
 
     //identify defender
@@ -446,20 +447,38 @@ function fight()
 
 
 
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   UI XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+function increaseValue() {
+    var value = parseInt(document.getElementById('numberAtk').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    document.getElementById('numberAtk').value = value;
+  }
+  
+  function decreaseValue() {
+    var value = parseInt(document.getElementById('numberAtk').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value < 1 ? value = 1 : '';
+    value--;
+    document.getElementById('numberAtk').value = value;
+  }
 
 
 
-
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   MAIN XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 //main
 function main()
 {
-    document.getElementById("shoot").addEventListener("click", function() {
+    document.getElementById("shoot").addEventListener("click", function() 
+    {
         shoot();
-      });
+    });
 
-    document.getElementById("fight").addEventListener("click", function() {
+    document.getElementById("fight").addEventListener("click", function() 
+    {
         fight();
-      });
+    });
 
 }

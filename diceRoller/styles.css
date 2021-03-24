@@ -123,3 +123,69 @@ body
 {
     margin-top: 20px;
 }
+
+
+
+/*UI STUFF*/
+
+form 
+{
+    width: 90px;
+    padding-left: 5px;
+    margin-top: 20px;
+}
+  
+.value-button 
+{
+    display: inline-block;
+    color: black;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px 0;
+    background: olivedrab;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .value-button:hover {
+    cursor: pointer;
+  }
+  
+  form #decrease {
+    margin-right: -4px;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  form #increase {
+    margin-left: -4px;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  form #input-wrap {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  input#numberAtk {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
