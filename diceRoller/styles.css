@@ -3,29 +3,32 @@ body
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1rem;
     background: black;
-    color: limegreen;
+    color: #060F0B;
 }
 
 #mainTitle
 {
     font-size: 2rem;
-    background: black;
-    color: limegreen;
+    background:#123526;
+    color: #11D385;
+    padding: 5px;
 }
 
 .cont
 {
     font-size: 1rem;
-    background: black;
-    color: limegreen;
+    background:#123526;
+    color: #11D385;
+    padding: 5px;
 }
 
 .subH
 {
     font-size: 1.5rem;
-    background: black;
-    color: limegreen;
+    background:#123526;
+    color: #11D385;
     margin: 0px 0px 20px 0px;
+    padding: 5px;
 }
 
 
@@ -37,35 +40,60 @@ body
 
 /* attacker */
 
-.unit
+.unit, .unitD
 {
     font-size: 0.8rem;
-    background-color: olivedrab;
     color: black;
     height: 40px;
     width: 80px;
     text-align: center;
     line-height: 40px;
-    border: solid 1px beige;
 }
 
+.unit
+{
+    background-color: #187288;
+    border: solid 1px #112A30;
+}
+
+.unitD
+{
+    background-color: #D87E22;
+    border: solid 1px #875625;
+}
 
 /* ations */
 
 .actBtn
 {
     font-size: 0.8rem;
-    background-color: orangered;
+    background-color: #db5922;
     color: black;
     height: 40px;
     width: 80px;
+    float: left;
     text-align: center;
     line-height: 40px;
-    border: solid 1px beige;
-    margin: 0px 0px 20px 20px;
+    border: solid 1px #874225;
+    margin: 0px 20px 20px 0px;
     cursor: pointer;
 }
 
+/*modifiers*/
+.actBtnM
+{
+    font-size: 0.8rem;
+    background-color: #874225;
+    color: black;
+    height: 40px;
+    width: 80px;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    border: solid 1px #4D291A;
+    margin: 0px 20px 20px 0px;
+    cursor: pointer;
+}
 
 /* results */
 #resCont
@@ -91,32 +119,32 @@ body
     height: 40px;
     text-align: center;
     line-height: 40px;
-    border: solid 1px beige;
+    border: solid 1px #060F0B;
 }
 
 #hit div
 {
-    background-color: burlywood;
+    background-color: #187288;
 }
 
 #wound div
 {
-    background-color: orange;
+    background-color: #187288;
 }
 
 #save div
 {
-    background-color: skyblue;
+    background-color: #D87E22;
 }
 
 #damage div
 {
-    background-color: palegreen;
+    background-color: #187288;
 }
 
 #outcome div
 {
-    background-color: olivedrab;
+    background-color: #11D385;
 }
 
 #resultText
@@ -139,14 +167,14 @@ form
 {
     display: inline-block;
     color: black;
-    border: 1px solid #ddd;
+    border: 1px solid #112A30;
     margin: 0px;
     width: 20px;
     height: 20px;
     text-align: center;
     vertical-align: middle;
     padding: 8px 0;
-    background: olivedrab;
+    background: #187288;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;

@@ -1,6 +1,6 @@
 //Dice roller app
 //kolkurtz 24_03_21
-//version 0.5
+//version 0.7
 
 
 //TODO
@@ -26,6 +26,10 @@ const units =
     const outO = document.getElementById("outcome");
     const outTxt = document.getElementById("resultText");
 
+
+//glob var
+    var lCov = false;
+    var dCov = false;
 
 //general d6 dice roller
 function d6Roll()
@@ -94,9 +98,22 @@ function wRoll(inStr,inTough)
 }
 
 //save rolling
-function saveRoll(savDef,apAtk)
+//args for raw save, armour pen and check to see if shooting or melee
+function saveRoll(savDef,apAtk,melee)
 {
-    var modSave = savDef-apAtk;
+
+    //are we in melee
+    if(melee==false)
+    {
+        //are there cover mods
+        var savMod = (lCov==false)? savDef : savDef-1;
+    }
+    else
+    {
+        var savMod = savDef;
+    }
+
+    var modSave = savMod-apAtk;
 
     var result = Math.floor(Math.random()*6)+1;
     //variable for success or not
@@ -172,9 +189,14 @@ function shoot()
                 //store
                 combat[combatItemLabel][0]=rollyH;
         newAtk.innerHTML = "" + rollyH;
-        outH.append(newAtk);
-        if(rollyH >= atkr[1])
+        
+        //are there mods?
+        var bsMods = (dCov==false) ? atkr[1] : atkr[1]+1;
+        console.log(bsMods);
+
+        if(rollyH>=bsMods)
         {
+            //hit
             newAtk.style.backgroundColor='red';
             combat[combatItemLabel][1]=1;
         }
@@ -182,6 +204,7 @@ function shoot()
         {
             combat[combatItemLabel][1]=0;
         }
+        outH.append(newAtk);
         
         
         //wounds
@@ -202,7 +225,7 @@ function shoot()
         //saves
         var newAtk = document.createElement("div");
         newAtk.classList.add('dyn');
-        var rollyS = saveRoll(dfndr[6],atkr[8]);
+        var rollyS = saveRoll(dfndr[6],atkr[8],false);
         newAtk.innerHTML = "" + rollyS[0];
                 //store
                 combat[combatItemLabel][4]=rollyS[0];
@@ -292,7 +315,7 @@ function shoot()
 
 
 
-//shooting rolls
+//fighting rolls
 function fight()
 {
     //combat matrix - all results in an object
@@ -329,8 +352,10 @@ function fight()
                 combat[combatItemLabel][0]=rollyH;
         newAtk.innerHTML = "" + rollyH;
         outH.append(newAtk);
+
         if(rollyH >= atkr[0])
         {
+            //hit
             newAtk.style.backgroundColor='red';
             combat[combatItemLabel][1]=1;
         }
@@ -358,7 +383,7 @@ function fight()
         //saves
         var newAtk = document.createElement("div");
         newAtk.classList.add('dyn');
-        var rollyS = saveRoll(dfndr[6],atkr[12]);
+        var rollyS = saveRoll(dfndr[6],atkr[12],true);
         newAtk.innerHTML = "" + rollyS[0];
                 //store
                 combat[combatItemLabel][4]=rollyS[0];
@@ -468,9 +493,47 @@ function increaseValue() {
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   MAIN XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+
+
+
+
 //main
 function main()
 {
+    
+    //modifier toggle
+    document.getElementById("lCov").addEventListener("click", function() 
+    {
+        if(lCov == false)
+        {
+            lCov = true;
+            document.getElementById("lCov").style.border="solid 1px white";
+        }
+        else
+        {
+            lCov = false;
+            document.getElementById("lCov").style.border="solid 1px #4D291A";
+        }
+    });
+
+    document.getElementById("dCov").addEventListener("click", function() 
+    {
+        if(dCov == false)
+        {
+            dCov = true;
+            document.getElementById("dCov").style.border="solid 1px white";
+            console.log("setting dCov: " + dCov)
+        }
+        else
+        {
+            dCov = false;
+            document.getElementById("dCov").style.border="solid 1px #4D291A";
+            console.log("setting dCov: " + dCov)
+        }
+    });
+
+
+    //action buttons
     document.getElementById("shoot").addEventListener("click", function() 
     {
         if(nAtk.value==0)
