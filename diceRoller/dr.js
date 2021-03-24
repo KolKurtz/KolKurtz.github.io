@@ -1,11 +1,18 @@
 //Dice roller app
 //kolkurtz 24_03_21
+//version 0.5
 
-//WS,BS,S,T,W,A,Sav,WeaponS,AP,DMG,NoATKS
+
+//TODO
+//Consider compiling fight into shoot using an arg to separate
+
+
+//WS 0 ,BS 1,S 2,T  3,W  4,A  5,Sav  6,WeaponS 7,AP 8,DMG 9,NoATKS 10,MweaponS 11,AP  12,DMG  13,NoAtks  14
 const units = 
 {
-    orkBoyShoota: [5,3,4,4,1,2,6,4,0,1,2], //10
-    smIntercessorBR: [3,3,4,4,2,2,3,4,-1,1,1]
+    orkBoyShoota: [3,5,4,4,1,2,6,4,0,1,2,4,0,1,1], 
+    orkBoySlugChop: [3,5,4,4,1,2,6,4,0,1,1,4,0,1,2],
+    smIntercessorBR: [3,3,4,4,2,2,3,4,-1,1,1,4,0,1,1]
 }
 
 
@@ -129,8 +136,19 @@ function rollDmg(wpDmg)
 
 
 //shooting rolls
-function roll()
+function shoot()
 {
+    //combat matrix - all results in an object
+    var combat = {};
+
+    //wipe outputs
+    outTxt.innerHTML="";
+    var removals = document.getElementsByClassName("dyn");
+    while(removals.length > 0){
+        removals[0].parentNode.removeChild(removals[0]);
+    }
+
+
     //identify attacker
     var atkr = units["orkBoyShoota"];
     var atkrCount = 9;
@@ -138,9 +156,6 @@ function roll()
 
     //identify defender
     var dfndr = units["smIntercessorBR"];
-
-    //combat matrix - all results in an object
-    var combat = {};
 
     //for each attacker
     for(let i=0;i<atkrShots;i++)
@@ -151,12 +166,13 @@ function roll()
 
         //hits
         var newAtk = document.createElement("div");
+        newAtk.classList.add('dyn');
         var rollyH = d6Roll();
                 //store
                 combat[combatItemLabel][0]=rollyH;
         newAtk.innerHTML = "" + rollyH;
         outH.append(newAtk);
-        if(rollyH >= atkr[0])
+        if(rollyH >= atkr[1])
         {
             newAtk.style.backgroundColor='red';
             combat[combatItemLabel][1]=1;
@@ -169,6 +185,7 @@ function roll()
         
         //wounds
         var newAtk = document.createElement("div");
+        newAtk.classList.add('dyn');
         var rollyW = wRoll(atkr[7],dfndr[3]);
         newAtk.innerHTML = "" + rollyW[0];
                //store
@@ -183,6 +200,7 @@ function roll()
         
         //saves
         var newAtk = document.createElement("div");
+        newAtk.classList.add('dyn');
         var rollyS = saveRoll(dfndr[6],atkr[8]);
         newAtk.innerHTML = "" + rollyS[0];
                 //store
@@ -196,6 +214,7 @@ function roll()
 
         //damage
         var newAtk = document.createElement("div");
+        newAtk.classList.add('dyn');
         var dmgUnit = "" + atkr[9];
 
         if(dmgUnit.indexOf("d")<0)
@@ -215,6 +234,7 @@ function roll()
 
         //outcomes
         var newAtk = document.createElement("div");
+        newAtk.classList.add('dyn');
         if(combat[combatItemLabel][1]==1 && combat[combatItemLabel][3]==1 && combat[combatItemLabel][5]==0)
         {
             if(combat[combatItemLabel][6]>=dfndr[4])
@@ -265,8 +285,168 @@ function roll()
 
     outTxt.innerHTML+="" + atkrCount + " orkBoyShoota" + "s have killed " + countDead + " smIntercessorBR" + "s and wounded " + remainWounds + " more";
 
+}
+
+
+
+
+
+//shooting rolls
+function fight()
+{
+    //combat matrix - all results in an object
+    var combat = {};
+
+    //wipe outputs
+    outTxt.innerHTML="";
+    var removals = document.getElementsByClassName("dyn");
+    while(removals.length > 0){
+        removals[0].parentNode.removeChild(removals[0]);
+    }
+
+
+    //identify attacker
+    var atkr = units["orkBoyShoota"];
+    var atkrCount = 9;
+    var atkrShots = 9 * atkr[10];
+
+    //identify defender
+    var dfndr = units["smIntercessorBR"];
+
+    //for each attacker
+    for(let i=0;i<atkrShots;i++)
+    {
+        //new data row
+        var combatItemLabel = "cbt"+ i;
+        combat[combatItemLabel] = [];
+
+        //hits
+        var newAtk = document.createElement("div");
+        newAtk.classList.add('dyn');
+        var rollyH = d6Roll();
+                //store
+                combat[combatItemLabel][0]=rollyH;
+        newAtk.innerHTML = "" + rollyH;
+        outH.append(newAtk);
+        if(rollyH >= atkr[0])
+        {
+            newAtk.style.backgroundColor='red';
+            combat[combatItemLabel][1]=1;
+        }
+        else
+        {
+            combat[combatItemLabel][1]=0;
+        }
+        
+        
+        //wounds
+        var newAtk = document.createElement("div");
+        newAtk.classList.add('dyn');
+        var rollyW = wRoll(atkr[11],dfndr[3]);
+        newAtk.innerHTML = "" + rollyW[0];
+               //store
+               combat[combatItemLabel][2]=rollyW[0];
+               combat[combatItemLabel][3]=rollyW[1];
+        outW.append(newAtk);
+        if(rollyW[1]==1)
+        {
+            newAtk.style.backgroundColor='red';
+        }
+        
+        
+        //saves
+        var newAtk = document.createElement("div");
+        newAtk.classList.add('dyn');
+        var rollyS = saveRoll(dfndr[6],atkr[12]);
+        newAtk.innerHTML = "" + rollyS[0];
+                //store
+                combat[combatItemLabel][4]=rollyS[0];
+                combat[combatItemLabel][5]=rollyS[1];
+        outS.append(newAtk);
+        if(rollyS[1]==1)
+        {
+            newAtk.style.backgroundColor='red';
+        }
+
+        //damage
+        var newAtk = document.createElement("div");
+        newAtk.classList.add('dyn');
+        var dmgUnit = "" + atkr[13];
+
+        if(dmgUnit.indexOf("d")<0)
+        {
+            newAtk.innerHTML = atkr[9];
+            combat[combatItemLabel][6]=atkr[9];
+            outD.append(newAtk);
+        }
+        else
+        {
+            //do multi damage roll
+            finalDmg = rollDmg(atkr[9]);
+            newAtk.innerHTML = finalDmg;
+            combat[combatItemLabel][6]=finalDmg;
+            outD.append(newAtk);
+        }
+
+        //outcomes
+        var newAtk = document.createElement("div");
+        newAtk.classList.add('dyn');
+        if(combat[combatItemLabel][1]==1 && combat[combatItemLabel][3]==1 && combat[combatItemLabel][5]==0)
+        {
+            if(combat[combatItemLabel][6]>=dfndr[4])
+            {
+                combat[combatItemLabel][7]="kill";
+                newAtk.innerHTML = "KILL";
+            }
+            else
+            {
+                combat[combatItemLabel][7]="wound";
+                newAtk.innerHTML = "WND";
+            }
+            newAtk.style.backgroundColor='red';
+        }
+        else
+        {
+            combat[combatItemLabel][7]="";
+        }
+        outO.append(newAtk);
+    }
+
+    
+    //Calculate final outcome
+    console.log(combat);
+    //count wounds
+    var countDead = 0;
+    var countWounds = 0;
+    for(thing in combat)
+    {
+        if(combat[thing][7]=="kill")
+        {
+            console.log("Found a kill");
+            countDead++;
+        }
+        if(combat[thing][7]=="wound")
+        {
+            console.log("Found a wound");
+            countWounds++;
+        }
+    }
+
+    //dead from wounds
+    var extraDeads = Math.floor(countWounds / dfndr[4]);
+    var remainWounds = countWounds % dfndr[4];
+
+    countDead = countDead + extraDeads;
+
+
+    outTxt.innerHTML+="" + atkrCount + " orkBoyShoota" + "s have killed " + countDead + " smIntercessorBR" + "s and wounded " + remainWounds + " more";
 
 }
+
+
+
+
+
 
 
 
@@ -274,5 +454,12 @@ function roll()
 //main
 function main()
 {
-    roll();
+    document.getElementById("shoot").addEventListener("click", function() {
+        shoot();
+      });
+
+    document.getElementById("fight").addEventListener("click", function() {
+        fight();
+      });
+
 }
