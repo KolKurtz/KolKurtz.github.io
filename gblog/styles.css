@@ -1,0 +1,172 @@
+/* MAIN CSS - GRIMBLOG  kolkurtz 2021 */
+
+body
+{
+    background: #000000;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+}
+
+
+/**restyle garish links**/
+:link, :visited
+{
+    color: rgb(10,162,228);
+    text-decoration: none;
+}
+
+.overElim
+{
+    position: relative;
+    overflow: hidden;    
+}
+
+
+.major
+{
+    padding: 6px;
+    width: 100%;
+    background: #555555;
+}
+
+#header, #footer
+{
+    height: 20px;
+}
+
+.banner
+{
+    text-align: center;
+    height: 150px;
+    background: #BBBBBB url(banner.jpg) no-repeat center top;
+}
+
+.tagline
+{
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+#main
+{
+    background: #000000;
+    padding-bottom: 23px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+#footer
+{
+    position: fixed;
+    bottom: 0px;
+}
+
+#footer div
+{
+    display: inline-block;
+}
+
+#tools
+{
+    color:#BBBBBB;
+}
+
+.tool
+{
+    width: 90px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.righty
+{
+    position: absolute;
+    right: 30px;
+}
+
+/**POSTS**/
+.post
+{
+    position: relative;
+    border: solid 2px #555555;
+    border-radius: 9px;
+    width: 350px;
+    min-height: 300px;
+    margin: 30px 30px 30px 30px;
+}
+
+.pTitle, .pBody, .pMeta
+{
+    background: #555555;
+    border-radius: 3px;
+    margin: 3px;
+    line-height: 20px;
+    padding-left: 3px;
+}
+
+
+.pTitle, .pMeta
+{
+    height: 20px;
+    text-align: left;
+}
+
+.pBody
+{
+    min-height: 260px;
+    padding: 6px;
+    text-align: left;
+    margin-bottom: 26px;
+}
+
+.pBody img
+{
+    border-radius: 6px;
+    width: 335px;
+}
+
+.pBody p
+{
+    margin-bottom: 9px;
+}
+
+.pMeta
+{
+    position: absolute;
+    width: 341px;
+    bottom: 0px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+
+/**MODAL**/
+
+.modal
+{
+    height:100%;
+    width:100%;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    background:#666666;
+    z-index:9999;
+}
+
+.modal .close 
+{
+    position: absolute;
+    top: 25px;
+    right: 65px;
+    z-index: 999;
+    cursor: pointer;
+  }
+    
