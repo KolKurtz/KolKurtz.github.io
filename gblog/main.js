@@ -93,13 +93,4 @@ function runMain()
         posts = parsePosts(data);
     });
 
-
-    //check for local storage
-    if(localStorage.getItem('test')) 
-    {
-    } 
-    else 
-    {
-        alert("Unsupported data storage API")
-    }
 }
