@@ -144,6 +144,12 @@ body
     cursor: pointer;
 }
 
+.aList
+{
+    height: 25px;
+    width: 25px;
+    background-image: url('images/file.png');
+}
 
 /**MODAL**/
 
