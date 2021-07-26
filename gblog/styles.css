@@ -44,7 +44,7 @@ body
 {
     text-align: center;
     height: 150px;
-    background:url(banner.jpg) no-repeat center center, radial-gradient(circle, rgba(0,36,4,1) 0%, rgba(9,121,16,1) 70%, rgba(76,152,90,1) 100%); repeat scroll 0% 0%;
+    background: url(banner.jpg) no-repeat center center, radial-gradient(circle, rgba(0,36,4,1) 0%, rgba(9,121,16,1) 70%, rgba(76,152,90,1) 100%) repeat scroll 0% 0%;
 }
 
 .tagline
@@ -86,6 +86,7 @@ body
     width: 90px;
     text-align: center;
     cursor: pointer;
+    color: rgb(10,162,228);
 }
 
 .righty

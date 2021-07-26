@@ -5,7 +5,11 @@
 //Posts loader
 //Post editor
 
-posts = {};
+const taglines = ["Come with me if you want to live","Get to the chopper","Get down","I'm from Beunos Ares and I say kill em all...","Come on you apes! You want to live forever?","It's an ugly planet. A BUG planet!","The disposal units ran night and day. We were that close to going out forever",
+"Phased plasma rifle in the 40-watt range.","You know, Burke, I don't know which species is worse.","That's it, man. Game over, man. Game over!"];
+
+var posts = {};
+var zoomOn = false;
 
 
 
@@ -78,6 +82,22 @@ function displayPosts()
 }
 
 
+function refreshTagline()
+{
+    var selectionQ = Math.floor(Math.random() * taglines.length);
+    $('#tagline').text(taglines[selectionQ]);
+}
+
+
+
+//zoom controls
+function toggleZoom()
+{
+}
+
+
+
+
 
 
 //MAIN    
@@ -85,6 +105,26 @@ function displayPosts()
 function runMain()
 {
     $('.modal').hide();
+
+    //load tagline
+    refreshTagline();
+
+    //UI BINDING
+    $('.tool').click(function(){
+        var clicky = $(this).attr('id');
+        if(clicky=="kkhome")
+        {
+        }
+        else if(clicky=="zoomifier")
+        {
+            toggleZoom();
+        }
+        else
+        {
+            console.log("Out of options");
+        }
+    });
+
 
     //load posts
     jQuery.get('posts/posts.txt', function(data) 
