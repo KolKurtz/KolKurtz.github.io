@@ -133,7 +133,7 @@ body
 .pBody img
 {
     border-radius: 6px;
-    image-rendering: pixelated;
+    image-rendering: auto;
     max-width: 100%;
 }
 
