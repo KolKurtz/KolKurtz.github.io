@@ -1,5 +1,5 @@
 //GBLOG MAIN KOLKURTZ 2021
-//v0.42
+//v0.4.3
 //TODO
 
 const taglines = ["Come with me if you want to live","Get to the chopper","Get down","I'm from Beunos Ares and I say kill em all...","Come on you apes! You want to live forever?","It's an ugly planet. A BUG planet!","The disposal units ran night and day. We were that close to going out forever",
@@ -98,6 +98,10 @@ function toggleZoom()
     }
     else
     {
+        //get available screen width
+
+        var availW = window.innerWidth;        
+
         //enable zoomy
         zoomOn = true;
         $('#zoomifier').append('<span class="signif">-ON</span>');
@@ -105,7 +109,7 @@ function toggleZoom()
         {
             var imgUrl = $(this).attr('src'); 
             console.log(imgUrl);
-            $('#imageFrame').append('<img class="fullImg" src=' + imgUrl +'>');
+            $('#imageFrame').append('<img class="fullImg" width="' + availW + '" src=' + imgUrl +'>');
             $('.modal').show();
         });
     }
@@ -155,7 +159,6 @@ function runMain()
             console.log("Out of options");
         }
     });
-
 
     //load posts
     jQuery.get('posts/posts.txt', function(data) 

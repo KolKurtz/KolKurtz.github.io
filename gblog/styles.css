@@ -177,19 +177,27 @@ body
     margin:auto;
     background:#666666;
     z-index:9999;
+    overflow-x: auto;
 }
 
 .modal .close 
 {
     position: absolute;
-    top: 25px;
-    right: 65px;
-    z-index: 999;
+    top: 21px;
+    right: 21px;
+    z-index: 9;
+    height: 21px;
+    line-height: 21px;
+    font-weight: bolder;
+    padding: 3px;
+    background-color: rgba(10,162,228,0.3);
     cursor: pointer;
   }
 
 #imageFrame
 {
+    position: absolute;
+    top: 21px;
     width: 100%;
 }
 
