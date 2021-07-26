@@ -1,5 +1,5 @@
 //GBLOG MAIN KOLKURTZ 2021
-//v0.4
+//v0.42
 //TODO
 
 const taglines = ["Come with me if you want to live","Get to the chopper","Get down","I'm from Beunos Ares and I say kill em all...","Come on you apes! You want to live forever?","It's an ugly planet. A BUG planet!","The disposal units ran night and day. We were that close to going out forever",
