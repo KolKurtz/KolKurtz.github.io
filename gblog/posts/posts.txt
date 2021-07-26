@@ -1,7 +1,8 @@
 Use an a asterisk before the post and a dollar before each part
-*$This weekend's Death Guard List$I'm playing a 1044pt list, a tight squeeze! LIST_DG Creeping death company.html_$deathguard,army,list
 *$1100pt Goff Ork list - Bike boss $Now I'm getting ready to be a Goff I need to test our their current rules and my new bikeboss Skragbad Necksnagga! So here's a neat little list: LIST_Goffs is da best!.html_$ork,armylist
 *$Ork codex release thoughts$I'll admit I was initially wary after dakka dakka dakka was removed. Now I think we're okay. But my orks are definitely turning into goffs! At least I didn't get too many done yet, there's time to get some checks painted on there! I dont love the loss of some of our good strats. What's left are mostly little buffs, nothing that really interrupts your opponent or changes up play. Might I propose:IMAGE_tbas.jpg_$ork,codex,rules,stratagem
 *$I made dis fing$IMAGE_orkfing.jpg_$model,greenstuff,ork
 *$First greenstuff experiment! Demon Prince$IMAGE_nurgDP.jpg_$model,greenstuff,chaos,demonprince
-*$Finished my reivers$IMAGE_reivilers.jpg_$model,reviler,astartes,reiver 
+*$Finished my reivers$IMAGE_reivilers.jpg_$model,reviler,astartes,reiver
+*$This weekend's Death Guard List$I'm playing a 1044pt list, a tight squeeze! LIST_DG Creeping death company.html_$deathguard,army,list
+*$Battle report NEC vs DGD$IMAGE_necdg250721.png_$batrep,necron,deathguard,openwar

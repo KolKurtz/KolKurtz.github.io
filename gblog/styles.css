@@ -19,7 +19,7 @@ body
 .overElim
 {
     position: relative;
-    overflow: hidden;    
+    overflow: hidden;
 }
 
 
@@ -35,11 +35,16 @@ body
     height: 20px;
 }
 
+#header
+{
+    font-family: 'Stick', sans-serif;
+}
+
 .banner
 {
     text-align: center;
     height: 150px;
-    background: #BBBBBB url(banner.jpg) no-repeat center top;
+    background:url(banner.jpg) no-repeat center center, radial-gradient(circle, rgba(0,36,4,1) 0%, rgba(9,121,16,1) 70%, rgba(76,152,90,1) 100%); repeat scroll 0% 0%;
 }
 
 .tagline
@@ -94,6 +99,7 @@ body
 {
     position: relative;
     border: solid 2px #555555;
+    background-color: #222222;
     border-radius: 9px;
     width: 350px;
     min-height: 300px;
@@ -120,25 +126,28 @@ body
 {
     min-height: 260px;
     padding: 6px;
-    text-align: left;
+    text-align: center;
     margin-bottom: 26px;
 }
 
 .pBody img
 {
     border-radius: 6px;
-    width: 335px;
+    image-rendering: pixelated;
+    max-width: 100%;
 }
 
 .pBody p
 {
     margin-bottom: 9px;
+    text-align: left;
 }
 
 .pMeta
 {
     position: absolute;
-    width: 341px;
+    width: auto;
+    padding: 0px 3px 0px 3px;
     bottom: 0px;
     font-size: 0.8rem;
     cursor: pointer;
@@ -146,9 +155,10 @@ body
 
 .aList
 {
-    height: 25px;
-    width: 25px;
+    height: 75px;
     background-image: url('images/file.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /**MODAL**/
