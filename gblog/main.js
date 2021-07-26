@@ -1,9 +1,6 @@
 //GBLOG MAIN KOLKURTZ 2021
-//v0.3
+//v0.4
 //TODO
-//Hovermode toggle - zoom images
-//Posts loader
-//Post editor
 
 const taglines = ["Come with me if you want to live","Get to the chopper","Get down","I'm from Beunos Ares and I say kill em all...","Come on you apes! You want to live forever?","It's an ugly planet. A BUG planet!","The disposal units ran night and day. We were that close to going out forever",
 "Phased plasma rifle in the 40-watt range.","You know, Burke, I don't know which species is worse.","That's it, man. Game over, man. Game over!"];
@@ -93,9 +90,43 @@ function refreshTagline()
 //zoom controls
 function toggleZoom()
 {
+    if(zoomOn == true)
+    {
+        zoomOn = false;
+        $('#zoomifier').text("zoomifier");
+        $('img').off();
+    }
+    else
+    {
+        //enable zoomy
+        zoomOn = true;
+        $('#zoomifier').append('<span class="signif">-ON</span>');
+        $('img').on('mousedown', function () 
+        {
+            var imgUrl = $(this).attr('src'); 
+            console.log(imgUrl);
+            $('#imageFrame').append('<img class="fullImg" src=' + imgUrl +'>');
+            $('.modal').show();
+        });
+    }
 }
 
 
+
+//modal control
+//hide modal on escape or close click
+$(document).keydown(function(e) 
+{
+    if(e.keyCode == 27) {
+        $(".modal").hide(300);
+}
+});
+
+$(".close").click(function()
+{
+    $('#imageFrame').empty();
+    $(".modal").fadeOut();
+});
 
 
 
