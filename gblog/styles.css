@@ -192,3 +192,19 @@ body
 {
     width: 100%;
 }
+
+
+@media only screen and (max-width: 600px) {
+    body 
+    {
+      background-color: lightblue;
+    }
+
+    #footer
+    {
+        font-size: 0.7rem;
+        position: fixed;
+        line-height: 20px;
+        bottom: 0px;
+    }
+}
