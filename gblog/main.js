@@ -86,7 +86,6 @@ function refreshTagline()
 }
 
 
-
 //zoom controls
 function toggleZoom()
 {
@@ -113,6 +112,12 @@ function toggleZoom()
             $('.modal').show();
         });
     }
+}
+
+//open stats library
+function goStatsLib()
+{
+    //load the stats library
 }
 
 
@@ -149,11 +154,15 @@ function runMain()
         var clicky = $(this).attr('id');
         if(clicky=="kkhome")
         {
+            window.location="https://kolkurtz.github.io/";
         }
         else if(clicky=="zoomifier")
         {
             toggleZoom();
         }
+        else if(clicky=="stats")
+        {
+            goStatsLib();        }
         else
         {
             console.log("Out of options");
