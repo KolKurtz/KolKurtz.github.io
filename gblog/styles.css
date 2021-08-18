@@ -97,6 +97,21 @@ body
 }
 
 /**POSTS**/
+
+.clearFilter
+{
+    color: rgb(10,162,228);
+    height: 20px;
+    font-size: 0.8rem;
+    line-height: 20px;
+    width: 100px;
+    text-align: center;
+    background: #333333;
+    padding: 3px 6px 3px 6px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
 .post
 {
     position: relative;
@@ -168,20 +183,6 @@ body
     background-repeat: no-repeat;
     background-position: center;
 }
-
-
-
-/**METAVIEW**/
-.redoPosts
-{
-    color: rgb(10,162,228);
-    cursor: pointer;
-}
-
-
-
-
-
 
 
 

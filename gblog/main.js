@@ -1,7 +1,6 @@
 //GBLOG MAIN KOLKURTZ 2021
-//v1.0.0
+//v1.0.1
 //TODO
-// finish meta term search to show related posts - complete displayPosts
 
 const taglines = ["Come with me if you want to live","Get to the chopper","Get down","I'm from Beunos Ares and I say kill em all...","Come on you apes! You want to live forever?","It's an ugly planet. A BUG planet!","The disposal units ran night and day. We were that close to going out forever",
 "Phased plasma rifle in the 40-watt range.","You know, Burke, I don't know which species is worse.","That's it, man. Game over, man. Game over!"];
@@ -68,6 +67,23 @@ function processTag(bodyString)
 //in its own function in case I write to JSON later
 function displayPosts(metaOn)
 {
+
+    //add clear filters button
+    if(metaOn != false)
+    {
+        $( "<div/>", 
+        {
+            "class": "clearFilter",
+            "text": "clear tags",
+            click: function() 
+            {
+                var rootLoc = location.href.split("?");
+                window.location = rootLoc[0];
+            }
+        }).appendTo($('#control'));
+    }
+
+
     //do posts flow filtered by meta term
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -250,13 +266,6 @@ function runMain()
         //remove any existing meta from URL and reload with new meta
         var rootLoc = location.href.split("?");
         window.location = rootLoc[0] + "?meta=" + this.innerText;
-    });
-
-    $('body').on('click',".redoPosts",function() 
-    {
-        //remove any existing meta from URL and reload
-        var rootLoc = location.href.split("?");
-        window.location = rootLoc[0];
     });
 
     //load posts
