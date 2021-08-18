@@ -1,11 +1,15 @@
 Use an a asterisk before the post and a dollar before each part
-*$Nick's first 9th Ed Ork outing$Nick"Army knowledge is a thing".IMAGE_nickork9th.jpeg_$batrep,ork,imperialfist,gt2021
-*$All my orks in a 9th edition list$I went with a Goffs battalion and a Bad Moons patrol to give me the best of the melee and shooting worlds.LIST_9th Ed Goffs with a Bad Moons kicker.html_$ork,armylist
-*$New Goff list 1045pts$This one is centered around a tankbuster Trukk, also containing Nob bodyguards and a distraction mechanized chunk of warbikers and a battlewagon.LIST_Goff Armoured Assault.html_$ork,armylist
+*$First three little bad moonz$IMAGE_grotbms.jpg_$model,badmoon,orks,grot
+*$Battle report Ulthwe vs Bad moons$I decided to try out my Bad Moons patrol. Great early pressure from the warbikes but I was fading by the end. Orks need melee! IMAGE_eldork140821.png_$batrep,eldar,orks,openwar
+*$Assault Intercessor done!$IMAGE_asint.jpg_$model,revilers,astartes,assaultintercessor
+*$Tyranids for Christmas$Seeing as it looks like there will be a Xenos (and most likely) Tyranid codex in December, I've prepped a list as the basis of a new army.LIST_TYRANIDS attack.html_$tyranids,armylist
+*$Nick's first 9th Ed Ork outing$Nick"Army knowledge is a thing".IMAGE_nickork9th.jpeg_$batrep,orks,imperialfist,gt2021
+*$All my orks in a 9th edition list$I went with a Goffs battalion and a Bad Moons patrol to give me the best of the melee and shooting worlds.LIST_9th Ed Goffs with a Bad Moons kicker.html_$orks,armylist
+*$New Goff list 1045pts$This one is centered around a tankbuster Trukk, also containing Nob bodyguards and a distraction mechanized chunk of warbikers and a battlewagon.LIST_Goff Armoured Assault.html_$orks,armylist
 *$Battle report NEC vs DGD$IMAGE_necdg250721.png_$batrep,necron,deathguard,openwar
 *$First greenstuff experiment! Demon Prince$IMAGE_nurgDP.jpg_$model,greenstuff,chaos,demonprince
 *$This weekend's Death Guard List$I'm playing a 1044pt list, a tight squeeze! LIST_DG Creeping death company.html_$deathguard,army,list
-*$1100pt Goff Ork list - Bike boss $Now I'm getting ready to be a Goff I need to test our their current rules and my new bikeboss Skragbad Necksnagga! So here's a neat little list: LIST_Goffs is da best!.html_$ork,armylist
-*$Ork codex release thoughts$I'll admit I was initially wary after dakka dakka dakka was removed. Now I think we're okay. But my orks are definitely turning into goffs! At least I didn't get too many done yet, there's time to get some checks painted on there! I dont love the loss of some of our good strats. What's left are mostly little buffs, nothing that really interrupts your opponent or changes up play. Might I propose:IMAGE_tbas.jpg_$ork,codex,rules,stratagem
-*$I made dis fing$IMAGE_orkfing.jpg_$model,greenstuff,ork
+*$1100pt Goff Ork list - Bike boss $Now I'm getting ready to be a Goff I need to test our their current rules and my new bikeboss Skragbad Necksnagga! So here's a neat little list: LIST_Goffs is da best!.html_$orks,armylist
+*$Ork codex release thoughts$I'll admit I was initially wary after dakka dakka dakka was removed. Now I think we're okay. But my orks are definitely turning into goffs! At least I didn't get too many done yet, there's time to get some checks painted on there! I dont love the loss of some of our good strats. What's left are mostly little buffs, nothing that really interrupts your opponent or changes up play. Might I propose:IMAGE_tbas.jpg_$orks,codex,rules,stratagem
+*$I made dis fing$IMAGE_orkfing.jpg_$model,greenstuff,orks
 *$Finished my reivers$IMAGE_reivilers.jpg_$model,reviler,astartes,reiver

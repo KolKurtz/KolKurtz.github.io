@@ -1,13 +1,13 @@
 //GBLOG MAIN KOLKURTZ 2021
-//v0.4.3
+//v1.0.0
 //TODO
+// finish meta term search to show related posts - complete displayPosts
 
 const taglines = ["Come with me if you want to live","Get to the chopper","Get down","I'm from Beunos Ares and I say kill em all...","Come on you apes! You want to live forever?","It's an ugly planet. A BUG planet!","The disposal units ran night and day. We were that close to going out forever",
 "Phased plasma rifle in the 40-watt range.","You know, Burke, I don't know which species is worse.","That's it, man. Game over, man. Game over!"];
 
-var posts = {};
 var zoomOn = false;
-
+var posts = {};
 
 
 function parsePosts(inny)
@@ -27,9 +27,17 @@ function parsePosts(inny)
         
     }
 
-    displayPosts();
 
-    console.log(posts);
+    //check for meta
+    if (location.href.indexOf("?") === -1) 
+    {
+        displayPosts(false);
+    }
+    else 
+    {
+        console.log("Meta filtered");
+        displayPosts(true);
+    }
 }
 
 
@@ -58,24 +66,81 @@ function processTag(bodyString)
 
 
 //in its own function in case I write to JSON later
-function displayPosts()
+function displayPosts(metaOn)
 {
+    //do posts flow filtered by meta term
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const filterTerm = urlParams.get('meta');
+    console.log(filterTerm);
+
     for(item in posts)
     {
-        $( "<div/>", 
+        if(metaOn === false)
         {
-            "id": item,
-            "class": "post",
-            click: function() 
+            $( "<div/>", 
             {
-            $( this ).toggleClass( "active" );
+                "id": item,
+                "class": "post",
+                click: function() 
+                {
+                $( this ).toggleClass( "active" );
+                }
+            }).appendTo($('#main'));
+        
+
+            //split the meta tags
+            var splitMeta = posts[item].meta.split(",");
+
+            var composedMeta = "";
+
+            for(i=0;i<splitMeta.length;i++)
+            {
+                composedMeta = composedMeta + "<span class=metaItem> " + splitMeta[i] + " </span>";
             }
-        }).appendTo($('#main'));
-    
-        //get new post and add components, filling from posts object
-        var newPostName = "#"+item;
-        $(newPostName).append('<div class="pTitle">' + posts[item].title + '</div><div class="pBody"><p>' + processTag(posts[item].body) + '</div><div class="pMeta">' + posts[item].meta + '</div>');
+
+            //get new post and add components, filling from posts object
+            var newPostName = "#"+item;
+            $(newPostName).append('<div class="pTitle">' + posts[item].title + '</div><div class="pBody"><p>' + processTag(posts[item].body) + '</div><div class="pMeta">' + composedMeta + '</div>');
+        }
+        else
+        {
+            if(posts[item].meta.indexOf(filterTerm) === -1)
+            {
+                console.log("item skipped, null hit")
+            }
+            else
+            {
+                $( "<div/>", 
+                {
+                    "id": item,
+                    "class": "post",
+                    click: function() 
+                    {
+                    $( this ).toggleClass( "active" );
+                    }
+                }).appendTo($('#main'));
+
+                //split the meta tags
+                var splitMeta = posts[item].meta.split(",");
+
+                var composedMeta = "";
+
+                for(i=0;i<splitMeta.length;i++)
+                {
+                    composedMeta = composedMeta + "<span class=metaItem> " + splitMeta[i] + " </span>";
+                }
+
+                //get new post and add components, filling from posts object
+                var newPostName = "#"+item;
+                $(newPostName).append('<div class="pTitle">' + posts[item].title + '</div><div class="pBody"><p>' + processTag(posts[item].body) + '</div><div class="pMeta">' + composedMeta + '</div>');              
+            }
+            
+        }
     }
+
+
+    console.log(posts);
 }
 
 
@@ -122,6 +187,16 @@ function goStatsLib()
 
 
 
+//meta search
+function metaSearch(searchTerm)
+{
+
+    $('#main').append(" " + searchTerm + "  - <span class='redoPosts'> back to all posts </span>");
+
+    console.log("Finding other: " + searchTerm);
+}
+
+
 //modal control
 //hide modal on escape or close click
 $(document).keydown(function(e) 
@@ -162,11 +237,26 @@ function runMain()
         }
         else if(clicky=="stats")
         {
-            goStatsLib();        }
+            goStatsLib();        
+        }
         else
         {
             console.log("Out of options");
         }
+    });
+
+    $('body').on('click',".metaItem",function() 
+    {
+        //remove any existing meta from URL and reload with new meta
+        var rootLoc = location.href.split("?");
+        window.location = rootLoc[0] + "?meta=" + this.innerText;
+    });
+
+    $('body').on('click',".redoPosts",function() 
+    {
+        //remove any existing meta from URL and reload
+        var rootLoc = location.href.split("?");
+        window.location = rootLoc[0];
     });
 
     //load posts
