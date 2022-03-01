@@ -1,8 +1,9 @@
 body
 {
   font-family: 'Quattrocento Sans', sans-serif;
-  font-size:1.5rem;
+  font-size:1rem;
   background: #32292f;
+  min-height: 1200px;
   overflow: hidden;
 }
 
@@ -13,12 +14,12 @@ body
 
 #cright
 {
-  position: absolute;
+  position: fixed;
   font-size: 0.8rem;
-  width: 300px;
+  width: auto;
   height: 15px;
   bottom: 0px;
-  left: 0px;
+  right: 10px;
   margin-left: 2px;
   colour: black;
 }
@@ -26,7 +27,8 @@ body
 
 #inst
 {
-  margin: 10px;
+  margin: 10px 0 5px 0;
+  line-height: 20px;
 }
 
 #fBoard
@@ -70,7 +72,7 @@ body
 {
   position: absolute;
   box-sizing: border-box;
-  margin: 25px 0px 0px 25px;
+  margin: 5px 0px 0px 5px;
   width: 200px;
   height: 200px;
   border-radius: 10px;
@@ -88,10 +90,10 @@ body
 .subBox
 {
   box-sizing: border-box;
-  border-radius: 12px;
   padding: 10px;
   background: #705d56;
   color: #f0f7f4;
+  font-size: 1rem;
 }
 
 
@@ -116,19 +118,37 @@ body
   display: none;
   position: absolute;
   width: 600px;
-  margin: 250px 0px 0px 20px;
+  border-radius: 10px;
+  margin: 210px 0px 0px 5px;
 }
+
+#analysis li
+{
+  margin: 10px 0 10px 0;
+}
+
+.hlght
+{
+  color: black;
+  margin-right: 5px;
+}
+
+.hlght2
+{
+  color: rgb(150,180,150);
+  margin-right: 5px;
+}
+
 
 #permcont
 {
   box-sizing: border-box;
   position: absolute;
-  width: 400px;
-  height: 40px;
-  bottom: 0px;
-  border-radius: 10px;
+  width: 300px;
+  height: 33px;
   right: 0px;
-  margin-right: 20px;
+  margin-top: 5px;
+  border-radius: 10px;
   padding: 10px;
   background: #705d56;
 }

@@ -9,6 +9,39 @@ var flat = 0;
 var noteCycle = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
 var noteCycleF = ["C","Db","D","Eb","E","F","Gb","G","Ab","A","Bb","B"];
 
+const scalarS = 
+{
+  "C": 0,
+  "C#": 1,
+  "D": 2,
+  "D#": 3,
+  "E": 4,
+  "F": 5,
+  "F#": 6,
+  "G": 7,
+  "G#": 8,
+  "A": 9,
+  "A#": 10,
+  "B": 11
+}
+
+const scalarF = 
+{
+  "C": 0,
+  "Db": 1,
+  "D": 2,
+  "Eb": 3,
+  "E": 4,
+  "F": 5,
+  "Gb": 6,
+  "G": 7,
+  "Ab": 8,
+  "A": 9,
+  "Bb": 10,
+  "B": 11
+}
+
+
 var wid = window.innerWidth  - 25;
 var hi = window.innerHeight;
 
@@ -52,6 +85,29 @@ function remove(arr, what) {
     }
 }
 //remove(array, 'B');
+
+
+
+//get note from scalar number
+function getNote(scal)
+{
+  var noteName;
+
+  var scaleSet = scalarS;
+
+  flat == 0? scaleSet = scalarS : scaleSet = scalarF;  
+
+  for(var noteValue in scaleSet)
+  {
+    if (scal == scaleSet[noteValue])
+    {noteName = noteValue};
+  }
+
+  return noteName;
+}
+
+
+
 
 
 
@@ -101,7 +157,9 @@ function handleSelect(noteName)
 
   if(selections.length>=2)
   {
-    showAnalysis();
+    //trigger analysis into chords
+    doAnalysis();
+
   }
 }
 
@@ -157,13 +215,69 @@ function addSel()
 }
 
 
+//perform analysis
+function doAnalysis()
+{
+  console.log("Analysing");
 
-//do analysis
-function showAnalysis()
+  var intervalic = "";
+  var chordal = "<br>nothing found";
+
+  //find minor thirds
+  intervalic +=  "<br>minor third: " + findInterval(3);
+  intervalic +=  "<br>major third: " + findInterval(4);
+  intervalic +=  "<br>flat 7th: " + findInterval(10);
+  intervalic +=  "<br>major 7th: " + findInterval(11);
+
+
+  //find sevenths
+  //intervalic += findInterval(7);
+
+  showAnalysis(intervalic,chordal);
+}
+
+//check selections for intervals specified by passed argument
+function findInterval(interval)
+{
+  var outputText = "";
+
+  var analysisSet = scalarS;
+
+  //set a switch between scalar flat and scalar sharp analysis
+  flat == 0? analysisSet = scalarS : analysisSet = scalarF;
+
+  console.log("SEARCH INTERVAL: " + interval);
+
+  for(i=0;i<selections.length;i++)
+  {
+    console.log("From origin: " + selections[i]);
+    var rootNum = (analysisSet[selections[i]]);
+    console.log("Which has scalar: " + rootNum);
+    var searchIntvl = (rootNum + interval) % 12;
+    console.log("New note at: " + searchIntvl);
+
+    var notey = getNote(searchIntvl);
+    console.log("Search selections for: " + notey);
+
+    if(selections.indexOf(notey) > -1)
+    {
+      outputText += "<span class='hlght2'>" + selections[i] + "-" + notey + "</span> ";
+    }
+  }
+
+  return outputText;
+}
+
+
+
+//display the  analysis results
+function showAnalysis(intvL,chD)
 {
   var attach = $("#analysis ul");
   $("#analysis ul li").remove();
-  $("<li></li>").html("Note content: " + selections).appendTo(attach);
+  $("<li></li>").html("<span class='hlght'>note content</span><br> " + selections).appendTo(attach);
+  $("<li></li>").html("<span class='hlght'>intervals</span> " + intvL).appendTo(attach);
+  $("<li></li>").html("<span class='hlght'>chord interpretation</span> " + chD).appendTo(attach);
   $("#analysis").show();
 }
 
