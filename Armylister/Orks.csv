@@ -1,0 +1,34 @@
+Type,Name,Arm,Pts
+HQ,Kurtz Demonsmasha,"Big choppa, kombi rokkit",90
+HQ,Deffsaw Gitripper,"Klaw, Saw",115
+HQ,Warboss Krugnak Bonemangle,"Da Mangler, Klaw",115
+HQ,Weirdboy,Weirdboy staff,70
+HQ,"Stompy Worldrekka, warboss","Uge chopper, big shoota",115
+HQ,Big Mek on bike,"2 dakkaguns, choppa, stikkbombs",101
+HQ,"Big Mekk, shokk attack gun","Shokk attack gun, stikkbombs",110
+HQ,Skragbad Necksnagga,Wartrike,120
+SLOTLESS,Nob on Smasha Squig,"Slugga, big choppa",65
+SLOTLESS,Runtherd,"Slugga, grabba stick",30
+TR,Gretchin,Blastas,4
+TR,"Boyz, shootas","Shoota, stikkbombs",8
+TR,"Boyz, choppas","Slugga, choppa, stikkbombs",8
+ELITE,Tankbusta,Rokkit launcha,16
+ELITE,Mek,"Kustom mega slugga, choppa",25
+ELITE,Nob,"Slugga, choppa, stikkbombs",17
+ELITE,Squighog boy,"Saddlegit, Stikka",25
+ELITE,Painboy,"Power klaw, syringe",70
+ELITE,Nob with waaaagh banner,"Kustom shoota, banner, stikkbombs",70
+ELITE,Burna Boy,Burna,10
+ELITE,Kommandos,"Slugga, choppa, stikkbombs",11
+ELITE,Meganob,"Kustom shoota, power klaw, stikkbombs",30
+FA,Kusom Boostablasta,"Burna exhausts, rivet kannon, grot blasta, stikkbombs",80
+FA,Stormboy,"Slugga, choppa, stikkbombs",10
+FA,Warbuggy,Twin big shoota,33
+FA,Warbiker,2 dakkaguns,25
+FA,Megatrakk Scrapjet,"Rokkit kannon, 2 twin big shootas, wing missiles, nose drill",100
+HS,Deff Dredd,"2 dreadklaws, 2 big shootas",85
+HS,Battlewagon,None,105
+HS,Mek Gun,Smasha Gun,40
+HS,Killa Kan,"Big shoota, kan klaw",35
+HS,Loota,Deffgun,14
+DT,Trukk,Big shoota,70

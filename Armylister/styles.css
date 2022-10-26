@@ -1,0 +1,230 @@
+/* MAIN CSS - GRIMBLOG  kolkurtz 2021 */
+
+body
+{
+    background: #000000;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+}
+
+
+/**restyle garish links**/
+:link, :visited
+{
+    color: rgb(10,162,228);
+    text-decoration: none;
+}
+
+.overElim
+{
+    position: relative;
+    overflow: hidden;
+}
+
+
+.major
+{
+    padding: 6px;
+    width: 100%;
+    background: #555555;
+}
+
+#header, #footer
+{
+    height: 20px;
+}
+
+#header
+{
+
+}
+
+
+#main
+{
+    background: #000000;
+    padding-bottom: 23px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+#footer
+{
+    position: fixed;
+    bottom: 0px;
+}
+
+#footer div
+{
+    display: inline-block;
+}
+
+#tools
+{
+    color:#BBBBBB;
+}
+
+.tool
+{
+    width: auto;
+    padding-right: 12px;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(10,162,228);
+}
+
+.righty
+{
+    position: absolute;
+    right: 30px;
+}
+
+/**LIST SECTIONS**/
+
+.clearFilter
+{
+    color: rgb(10,162,228);
+    height: 20px;
+    font-size: 0.8rem;
+    line-height: 20px;
+    width: 100px;
+    text-align: center;
+    background: #333333;
+    padding: 3px 6px 3px 6px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.largeSec
+{
+    position: relative;
+    border: solid 2px #555555;
+    background-color: #222222;
+    border-radius: 9px;
+    padding: 5px;
+    width: 80%;
+    min-height: 50px;
+    margin: 20px 30px 20px 30px;
+}
+
+.pTitle, .pBody, .pMeta
+{
+    background: #555555;
+    border-radius: 3px;
+    margin: 3px;
+    line-height: 20px;
+    padding-left: 3px;
+}
+
+
+.pTitle, .pMeta
+{
+    height: 20px;
+    text-align: left;
+}
+
+.pBody
+{
+    min-height: 260px;
+    padding: 6px;
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.pBody img
+{
+    border-radius: 6px;
+    image-rendering: auto;
+    max-width: 100%;
+}
+
+.pBody p
+{
+    margin-bottom: 9px;
+    text-align: left;
+}
+
+.pMeta
+{
+    position: absolute;
+    width: auto;
+    padding: 0px 3px 0px 3px;
+    bottom: 0px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.metaItem
+{
+    color: rgb(10,162,228);
+    margin-right: 3px;
+}
+
+.aList
+{
+    height: 75px;
+    background-image: url('images/file.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+/**MODAL**/
+
+.modal
+{
+    height:100%;
+    width:100%;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    background:#666666;
+    z-index:9999;
+    overflow-x: auto;
+}
+
+.modal .close 
+{
+    position: absolute;
+    top: 21px;
+    right: 21px;
+    z-index: 9;
+    height: 21px;
+    line-height: 21px;
+    font-weight: bolder;
+    padding: 3px;
+    background-color: rgba(10,162,228,0.3);
+    cursor: pointer;
+  }
+
+#imageFrame
+{
+    position: absolute;
+    top: 21px;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    body 
+    {
+      background-color: #222222;
+    }
+
+    #footer
+    {
+        font-size: 0.7rem;
+        position: fixed;
+        line-height: 20px;
+        bottom: 0px;
+    }
+}
