@@ -1,0 +1,359 @@
+/* MAIN CSS - Lister  kolkurtz 2021 */
+
+body
+{
+    background: #171016;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    margin: 0px;
+}
+
+.overElim
+{
+    position: relative;
+    overflow: hidden;    
+}
+
+
+.major
+{
+    padding: 6px;
+    width: 100%;
+    background: #20151E;
+}
+
+.headUp, #footer
+{
+    height: 20px;
+}
+
+.generator 
+{
+    margin: 40px 0 40px 40px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-family: Tahoma;
+    padding: 20px;
+    background-color: #20151e;
+    -webkit-box-shadow: 1px 1px 20px 0 #000000;
+    -moz-box-shadow: 1px 1px 20px 0 #000000;
+    box-shadow: 1px 1px 20px 0 #000000;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #FFFFFF 1px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+ 
+.generator:hover 
+{
+    background: #F50C0C;
+    border: solid #DD380D 1px;
+}
+
+#main
+{
+    background: #0d060c;
+    padding-bottom: 23px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 400px;
+}
+
+#main ul
+{
+    list-style: none;
+}
+
+.control
+{
+    font-size: 1rem;
+    width: 100%;
+    margin: 20px 0 20px 20px;
+    cursor: pointer;
+}
+
+.control img
+{
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+    image-rendering: pixelated;
+}
+
+.outliner
+{
+    border: solid 2px white;
+}
+
+.control ul
+{
+    list-style: none;
+}
+
+.control li
+{
+    margin: 40px 0 40px 0;
+}
+
+.optInd
+{
+    color: greenyellow;
+    border: solid 1px white;
+    padding: 2px;
+}
+
+.cardSpan
+{
+    padding: 0px 5px 0px 5px;
+    border: 2px solid greenyellow;
+
+}
+
+/**CARD STYLING**/
+
+.titleC, .condC, .descC
+{
+    border: solid 1px #666666;
+    border-radius: 3px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.card
+{
+    border: solid 1px #272A1C;
+    background-color: #161711;
+    border-radius: 3px;
+    margin: 20px;
+    width: 220px;
+    min-height: 300px;
+}
+
+.setC
+{
+    color:#666666;
+    margin-bottom: 5px;
+}
+
+.titleC, .descC
+{
+    background-color: #1C1E15;
+}
+
+
+/**FOOTER**/
+
+
+
+
+#footer
+{
+    position: fixed;
+    bottom: 0px;
+}
+
+#footer div
+{
+    display: inline-block;
+}
+
+#tools
+{
+    color:#BBBBBB;
+}
+
+.tool
+{
+    width: 90px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.righty
+{
+    position: absolute;
+    right: 30px;
+}
+
+
+/* LIST STYLE */
+
+.listy
+{
+    position: relative;
+    border: solid 2px #555555;
+    border-radius: 9px;
+    width: 400px;
+    min-height: 400px;
+    margin: 30px 30px 30px 30px;
+    padding-bottom: 20px;
+}
+
+
+
+.lTit, .lControl
+{
+    height: 20px;
+    font-size: 1rem;
+    vertical-align: middle;
+    padding: 12px 0 12px 0;
+}
+
+
+.lTit
+{
+    display: inline-block;
+    width: 80%;
+    text-align: center;
+}
+
+.lControl
+{
+    display: inline-block;
+    width: 18%;
+    text-align: center;
+}
+
+.subCont
+{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 0 0 3px;
+    cursor: pointer;
+}
+
+.swatch
+{
+    background: #ffffff url("swatch.png") no-repeat left top;
+}
+
+.inAndOut
+{
+    background: #ffffff url("inAndOut.png") no-repeat left top;
+}
+
+.lBodyO, .lBodyC
+{
+    padding: 6px 0 6px 0;
+}
+
+.listItem div
+{
+    display: inline-block;
+}
+
+.iBody
+{
+    padding: 0 0 18px 12px;
+    width: 80%;
+}
+
+.iCont
+{
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0px 3px 0px 6px;
+    cursor: pointer;
+}
+
+.complete
+{
+    color: #666666;
+}
+
+.ticker
+{
+    background: #ffffff url("ticker.png") no-repeat left top;
+}
+
+.unticker
+{
+    background: #ffffff url("unticker.png") no-repeat left top;
+}
+
+.deleter
+{
+    background: #ffffff url("bin.png") no-repeat left top;
+}
+
+.newItem
+{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 6px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.newItem:hover
+{
+    background: #666666;
+}
+
+.modal
+{
+    height:100%;
+    width:100%;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    background:#666666;
+    z-index:9999;
+}
+
+#newTask
+{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 560px;
+}
+
+#newTask label
+{
+    vertical-align: top;
+    margin-right: 15px;
+}
+
+#newTask textarea
+{
+    font-size: 1rem;
+    font-family: inherit;
+    padding: 3px;
+    background-color: #FFFFFF;
+    border: 2px solid var(--input-border);
+    border-radius: 3px;
+    size: 200;
+    width: 400px;
+    resize: none;
+}
+
+#newTask input:focus 
+{
+    outline: 3px solid #333333;
+}
+
+#adv
+{
+    text-align: center;
+    color: #BBBBBB;
+}
+
+.modal .close 
+{
+    position: absolute;
+    top: 25px;
+    right: 65px;
+    z-index: 999;
+    cursor: pointer;
+  }
