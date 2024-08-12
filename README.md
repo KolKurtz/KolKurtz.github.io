@@ -1,4 +1,4 @@
-My much negelected Githib IO site. Here are my forthcoming changes and plans.
+My much negelected Githib IO site. Here are my forthcoming changes and plans:
 
 Site redesign
 Indexed projects list
