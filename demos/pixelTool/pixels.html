@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+<head profile="http://www.w3.org/2005/10/profile">
+    <title>Ultimate pixel tools</title>
+    <meta name="description" content="pixel tool">
+    <meta name="keywords" content="Pixel tools">
+    <meta name="author" content="kolkurtz">
+    <link rel="stylesheet" href="CSS/Styles.css" type="text/css">
+    <script src="js/jquery.js"></script>
+	<script src="js/scripts.js">
+    
+<script type="text/javascript">
+  <!--
+  if (screen.width <= 800) {
+    window.location = "Mobile/mobWelcome.html";
+  }
+  //-->
+</script>
+</head>
+<body>
+
+<div id="backer">
+
+	<div id="twoD" class="modelBox">	
+		A 2D LIGHTING MODEL
+
+		 <div id="theSquare">
+				<figure id="face"></figure>
+		 </div>
+		 
+		<div id="twoDOuts">
+			<ul>
+			<li>HI: <span id="hi"></span></li>
+			<li>MID: <span id="mid"></span></li>
+			<li>BASE: <span id="base"></span></li>
+			<li>PRIME: <span id="primarySel"></span></li>
+			</ul>
+		</div>
+		 
+	</div>
+	 
+	<div id="threeD" class="modelBox">	
+		A 3D LIGHTING MODEL
+		 <div id="cube">
+				<figure class="top"></figure>
+				<figure class="left"></figure>
+				<figure class="front"></figure>
+		</div>
+
+		<div id="threeDOuts">
+			TOP
+			<ul>
+			<li>TOPHI: <span id="tophi"></span></li>
+			<li>TOPMID: <span id="topmid"></span></li>
+			<li>TOPBASE: <span id="topbase"></span></li>
+			<li>PRIME: <span id="topprime"></span></li>
+			</ul>
+			<br>
+			LEFT
+			<ul>
+			<li>LEFTHI: <span id="lefthi"></span></li>
+			<li>LEFTMID: <span id="leftmid"></span></li>
+			<li>LEFTBASE: <span id="leftbase"></span></li>
+			<li>PRIME: <span id="leftprime"></span></li>
+			</ul>
+			<br>
+			FRONT
+			<ul>
+			<li>FRONTHI: <span id="fronthi"></span></li>
+			<li>FRONTMID: <span id="frontmid"></span></li>
+			<li>FRONTBASE: <span id="frontbase"></span></li>
+			<li>FRONTPRIME: <span id="frontprime"></span></li>
+			</ul>
+			<br>			
+		</div>
+
+	</div>
+
+	<div id="control">
+		<label for="primary">Input rgb colour (R/G/B):</label>
+		<input type="text" id="primary" size="10"><br><br>
+		<label for="primaryH">Input hex (NNNNNN):</label>
+		<input type="text" id="primaryH" size="10"><br><br>
+	</div>
+	
+	
+<!--FOOTER-->
+    <div id="footer">
+        <span id="floatText">
+        <a href="http://www.pixelours.com"> Pixelours : </a>
+        <a href="http://primacy.pixelours.com"> Primacy</a>
+        </span>
+    </div>
+<!--FOOTER END--> 
+	
+	
+</div>  
+
+
+</body>
+</html>

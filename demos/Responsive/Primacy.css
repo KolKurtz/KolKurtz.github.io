@@ -1,0 +1,76 @@
+#screenshotSlider
+{
+    box-sizing: border-box;
+    background: url("sshotBack.png");
+    background-size: 100% 100%;
+    width:90%;
+    max-width:800px;
+    min-width:300px;
+    height: 300px;
+    margin: 30px auto;
+    text-align:center;
+}
+
+#hide
+{
+    overflow: hidden;
+}
+
+.shotBox
+{
+    box-sizing: border-box;
+    margin-top: 15px;
+    width: 21%;
+    border: solid 2px rgba(0,0,0,0.3);
+    max-height: 270px;
+}
+
+.sshotBoxFirst
+{
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-left: 20px;
+    margin-right: 3.3%;
+    float: left;
+}
+
+.sshotBox
+{
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-right: 3.3%;
+    float: left;
+}
+
+.sshotBoxEnd
+{
+    overflow: hidden;
+    box-sizing: border-box;
+    float: left;
+}
+
+
+
+/*centred social wrap*/
+
+#centreWrapSocial
+{
+    text-align: center;
+}
+
+#socialbox
+{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    height: 130px;
+    list-style: none;
+}
+
+#socialbox li
+{
+    float: left;
+    height: 130px;
+    width: 130px;
+    padding: 2px 5px;
+}

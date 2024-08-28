@@ -1,0 +1,235 @@
+/*BEGIN RESETS*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a:link, a:visited, a:hover, a:active { color:#000000; text-decoration: none;}
+
+/*END RESETS*/
+
+/*FONT*/
+
+@font-face
+{
+      font-family: "Iconyu";
+      src: url("../Media/font/Iconyu.ttf") format('truetype'),
+			url('../Media/font/Iconyu.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+}
+
+/*END FONT*/
+
+
+html, body
+{
+	box-sizing: border-box;
+}
+
+body
+{
+	/*font-family: "body", sans-serif;*/
+	font-family: "Iconyu", Geneva, sans-serif;
+	font-size: 1em;
+}
+
+
+label
+{
+	display: block;
+	float: left;
+	width: 170px;
+	line-height: 1.7em;
+}
+
+#backer
+{
+	position: absolute;
+	width: 90%;
+	height: 800px;
+	margin-top: 20px;
+	margin-left: 5%;
+	background: rgb(220,220,220);
+}
+
+#footer
+{
+	position: absolute;
+	bottom: 0px;
+	text-align: center;
+	width: 90%;
+	margin-top: 20px;
+	margin-left: 5%;
+	background: rgb(220,220,220);
+}
+
+#control
+{
+	float: right;
+	width: 35%;
+	box-sizing: border-box;
+	margin-top: 50px;
+}
+
+.modelBox
+{
+	box-sizing: border-box;
+	position: absolute;
+	width: 60%;
+	background: rgba(200,200,200,0.4);
+	padding: 10px;
+}
+
+#twoD, #threeD
+{
+	left: 25px;
+}
+#twoD
+{
+	top: 25px;
+	height: 200px;
+}
+#threeD
+{
+	top: 250px;
+	left: 25px;
+	height: 400px;
+}
+
+#twoDOuts
+{
+	box-sizing: border-box;
+	position: absolute;
+	right: 10px;
+	width: 250px;
+	height: 150px;
+	background: rgba(200,200,200,0.6);
+	padding: 2px;
+}
+
+#twoDOuts li
+{
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	height: 37px;
+}
+
+#threeDOuts
+{
+	box-sizing: border-box;
+	position: absolute;
+	right: 10px;
+	width: 250px;
+	height: 350px;
+	background: rgba(200,200,200,0.6);
+	padding: 2px;
+}
+
+#threeDOuts li
+{
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	height: 22px;
+}
+
+figure
+{
+	box-sizing: border-box;
+	position: absolute;
+	display: block;
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size: 1em;
+	border: solid 3px white;
+}
+
+/*  2D   */
+
+#face
+{
+	position: absolute;
+	top: 50px;
+	left: 20px;
+	width: 100px;
+	height: 100px;
+}
+
+#cube
+{
+  position: absolute;
+}
+
+/*  3D   */
+
+.top {
+  -webkit-transform: rotate(-30deg) skewX(30deg) skewY(0deg) scaleY(0.87);
+  -ms-transform: rotate(-30deg) skewX(30deg) skewY(0deg) scaleY(0.87);
+  -moz-transform: rotate(-30deg) skewX(30deg) skewY(0deg) scaleY(0.87);
+  -o-transform: rotate(-30deg) skewX(30deg) skewY(0deg) scaleY(0.87);
+  transform: rotate(-30deg) skewX(30deg) skewY(0deg) scaleY(0.87);
+  
+  left: 50px;
+  top: 70px;
+}
+ 
+.left {
+  -webkit-transform: rotate(30deg) skewX(30deg) skewY(0deg);
+  -ms-transform: rotate(30deg) skewX(30deg) skewY(0deg);
+  -moz-transform: rotate(30deg) skewX(30deg) skewY(0deg);
+  -o-transform: rotate(30deg) skewX(30deg) skewY(0deg);
+  transform: rotate(30deg) skewX(30deg) skewY(0deg);
+
+  left: 7px;
+  top: 153px;  
+  
+}
+ 
+.front {
+  -webkit-transform: rotate(-30deg) skewX(-30deg) skewY(0deg);
+  -ms-transform: rotate(-30deg) skewX(-30deg) skewY(0deg);
+  -moz-transform: rotate(-30deg) skewX(-30deg) skewY(0deg);
+  -o-transform: rotate(-30deg) skewX(-30deg) skewY(0deg);
+  transform: rotate(-30deg) skewX(-30deg) skewY(0deg);
+  
+  left: 94px;
+  top: 153px;
+}

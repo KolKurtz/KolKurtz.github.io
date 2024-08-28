@@ -1,0 +1,37 @@
+LOOP START
+
+PASSIVE	(x)	Full screen countdown screen
+
+ACTIVE	(1)	Player selects action - Opp selects action
+
+PASSIVE (x)	GUI animates player position changes
+
+ACTIVE  (2) Player hits confirm [SPACE], a modify button OR a special
+
+PASSIVE	(3) GUI animates effects and updates stats
+
+RELOOP
+
+
+
+NOTES:
+If a player times out then they still regen energy but their conc drops to 2.
+Concentration received at turn end is ZEN x remainingtime%
+
+Players can use a chargepod to restore energy
+Players can use a stimhack to restore conc from energy
+
+
+
+NEXT STEPS:
+
+OPPONENT phase 1 and 2 selections need to be finished.
+STIMHACK and CHARGEPOD need to be implemented.
+HOVER AN ACTION TO SEE MOVE COST
+Lockout buttons at timeout
+
+
+
+AI decisionmaking
+
+Phase one choices are made on the basis of personality AND Hitpoints AND past moves.
