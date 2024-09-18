@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\art",
-    "\\growl"
+    "\\demos",
+    "\\demos\\vgh"
   ],
-  "SelectedNode": "\\demos",
+  "SelectedNode": "\\demos\\vgh\\hero.html",
   "PreviewInSolutionExplorer": false
 }

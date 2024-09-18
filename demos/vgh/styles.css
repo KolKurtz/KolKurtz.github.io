@@ -1,0 +1,34 @@
+﻿body 
+{
+    color: #800080;
+    background: #9D9AA0;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#container div 
+{
+    max-width: 250px;
+    max-height: 205px;
+}
+
+.frame img
+{
+    width: 100%;
+    height: 100%;
+}
+
+@media (width <= 1036px) 
+{
+    #container div 
+    {
+        max-width: 150px;
+        max-height: 120px;
+        overflow: hidden;
+    }
+}
