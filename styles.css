@@ -1,48 +1,188 @@
+/*font*/
+
+
+.chakra-petch-light {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.chakra-petch-regular {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.chakra-petch-medium {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.chakra-petch-semibold {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.chakra-petch-bold {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.chakra-petch-light-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.chakra-petch-regular-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.chakra-petch-medium-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.chakra-petch-semibold-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.chakra-petch-bold-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+
+
+
+body a:link, a:visited, a:hover, a:active {
+    color: #E0E2D9;
+    text-decoration: none;
+}
+
 body::-webkit-scrollbar
 {
   display: none;
 }
 
-#banner
+
+body 
 {
-    margin: 10px;
+    background-color: #9D9AA0;
+    color: #FFFFFF;
+    overflow-x: hidden;
 }
 
-.level1
+
+#header, #footer 
 {
     padding: 10px;
-    background-color: #705d56;
-    border-radius: 12.5px;
-    margin: 10px;
+    width: auto;
+    background-color: #838086;
+    clear: both;
+    box-sizing:border-box;
 }
 
-.level1 p
+#header
 {
-    margin-bottom: 5px;
+    height: 100px;
 }
 
-.level2
+#titleBanner 
 {
-    font-size: 12px;
-    margin: 10px;
+    width: 400px;
+    height: 80px;
+    float: right;
+    background-image: url(asset/kolkurtzB.png);
 }
 
-body
+#welcome, #blog, #demo 
 {
- font-family: 'Quattrocento Sans', sans-serif;
- background-color: #32292f;
- color: #f0f7f4;
- overflow-x: hidden;
+    background-color: none;
+    border: solid 2px #838086;
+    box-sizing: border-box;
+    padding: 5px;
 }
 
 
-body a:link, a:visited, a:hover, a:active
+#welcome 
 {
-    color: #99e1d9;
-    text-decoration: none;
+    width: 30%;
+    float: left;
+    height: 80%;
+    min-height: 800px;
+    margin: 2%;
 }
 
-ul li
+#blog, #demo
 {
+    float: left;
+}
+
+#blog {
+    width: 62%;
+    min-height: 200px;
+    max-height: 200px;
+    margin: 2% 2% 2% 0;
+    padding-right: 10px;
+    overflow-y: scroll;
+    scrollbar-color: #FFF #979D83;
+    scrollbar-width: thin;
+}
+
+#demo {
+    width: 40%;
+    max-height: 580px;
+    overflow-x: hidden;
+    scrollbar-color: #FFF #979D83;
+    scrollbar-width: thin;
+}
+
+
+.appBlock 
+{
+    background-color: #665E6F;
+    border: solid 2px #665E6F;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 6px;
+}
+
+
+ul li {
     list-style: none;
+}
+
+
+#pictureBox 
+{
+    float: left;
+    width: 20%;
+    height: 570px;
+    bottom: -72px;
+    margin-left: 2%;
+    display: flex;
+    align-items: flex-end;
+}
+
+#pictureBox > img:first-of-type
+{
+
+}
+
+
+#contact
+{
+    float: right;
 }

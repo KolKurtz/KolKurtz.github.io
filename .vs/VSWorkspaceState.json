@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\art",
+    "\\growl"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\demos",
   "PreviewInSolutionExplorer": false
 }
